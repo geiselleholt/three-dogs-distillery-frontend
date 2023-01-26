@@ -1,5 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import CustomerList from "./Components/CustomerList";
+import OrderList from "./Components/OrderList";
+import ItemList from "./Components/ItemList";
+import LabelList from "./Components/LabelList";
+import NewCustomerForm from "./NewCustomerForm";
+import NewOrderForm from "./NewCustomerForm";
+import NewItemForm from "./NewItemForm";
+import NewLabelForm from "./NewCustomerForm";
 
 function App() {
   return (
