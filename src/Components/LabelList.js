@@ -1,7 +1,7 @@
 import React from "react";
 import Label from "./Label";
-// import "./LabelList.css";
 import PropTypes from "prop-types";
+import LabelList from "./ComponentsCss/LabelList";
 
 
 const LabelList = (props) => {

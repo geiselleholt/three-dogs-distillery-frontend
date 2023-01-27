@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-// import "./NewCustomerForm.css";
+import NewCustomerForm from "./ComponentsCss/NewCustomerForm";
 
 const NewCustomerForm = ({ addCustomerCallback }) => {
   const [customerData, setCustomerData] = useState({

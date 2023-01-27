@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import './Item.css';
+import Item from "./ComponentsCss/Item";
 
 const Item = (props) => {
   return (

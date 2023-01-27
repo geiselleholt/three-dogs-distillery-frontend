@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import './Order.css';
+import Order from "./ComponentsCss/Order";
 
 const Order = (props) => {
   return (

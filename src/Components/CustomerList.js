@@ -1,7 +1,7 @@
 import React from "react";
 import Customer from "./Customer";
 import PropTypes from "prop-types";
-// import "./CustomerList.css";
+import CustomerList from "./ComponentsCss/CustomerList";
 
 const CustomerList = (props) => {
   return (
