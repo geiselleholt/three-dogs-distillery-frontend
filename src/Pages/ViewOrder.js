@@ -1,9 +1,9 @@
-import "./ViewOrder.css";
+
 
 const ViewOrder = () => {
   return (
     <div>
-      Hello
+      Hello from ViewOrder
     </div>
   );
 };

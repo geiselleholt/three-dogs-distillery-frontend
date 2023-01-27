@@ -1,9 +1,9 @@
-import "./Admin.css";
+
 
 const Admin = () => {
   return (
     <div>
-      Hello
+      Hello from Admin page
     </div>
   );
 };

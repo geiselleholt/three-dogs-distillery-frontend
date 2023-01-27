@@ -1,9 +1,9 @@
-import "./ContactPage.css";
+
 
 const ContactPage = () => {
   return (
     <div>
-      Hello
+      Hello from Contact page
     </div>
   );
 };

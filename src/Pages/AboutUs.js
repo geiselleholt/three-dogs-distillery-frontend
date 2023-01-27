@@ -1,9 +1,9 @@
-import "./AboutUs.css";
+
 
 const AboutUs = () => {
   return (
     <div>
-      Hello
+      Hello from AboutUs page
     </div>
   );
 };
