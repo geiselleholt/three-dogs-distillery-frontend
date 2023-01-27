@@ -1,18 +1,27 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import "./NewItemForm.css";
+// import "./NewItemForm.css";
 
 const NewItemForm = ({ addItemCallback }) => {
   const [itemData, setItemData] = useState({
-    title: "",
-    owner: "",
+    spirit_type: "",
+    spirit_flavor: "",
+    bottle_type: "",
+    bottle_quantity: "",
+    age_time: "",
   });
 
-  const submtItemData = (e) => {
+  const submItitemData = (e) => {
     e.preventDefault();
 
     addItemCallback(itemData);
-    setItemData({ title: "", owner: "" });
+    setItemData({
+      spirit_type: "",
+      spirit_flavor: "",
+      bottle_type: "",
+      bottle_quantity: "",
+      age_time: "",
+    });
   };
 
   const handleChange = (e) => {
@@ -20,34 +29,55 @@ const NewItemForm = ({ addItemCallback }) => {
   };
 
   return (
-    <form onSubmit={submtItemData}>
+    <form onSubmit={submItitemData}>
       <section>
-        <div className="new__item__fields">
-          <label htmlFor="name">Item Name</label>
+        <div>
+          <label htmlFor="name">Spirit Type</label>
           <input
-            name="title"
-            id="title"
-            value={itemData.title}
+            name="spirit_type"
+            id="spirit_type"
+            value={itemData.spirit_type}
             onChange={handleChange}
-            className={itemData.title.length === 0 ? "invalid__form__input" : ""}
+            className={itemData.spirit_type.length === 0 ? "invalid__form__input" : ""}
           />
-          <label htmlFor="name">Your Name</label>
+          <label htmlFor="name">Would You Like To A Flavor Infusion?</label>
           <input
-            name="owner"
-            id="owner"
-            value={itemData.owner}
+            name="spirit_flavor"
+            id="spirit_flavor"
+            value={itemData.spirit_flavor}
             onChange={handleChange}
-            className={itemData.owner.length === 0 ? "invalid__form__input" : ""}
+          />
+          <label htmlFor="name">Bottle Type</label>
+          <input
+            name="bottle_type"
+            id="bottle_type"
+            value={itemData.bottle_type}
+            onChange={handleChange}
+            className={itemData.bottle_type.length === 0 ? "invalid__form__input" : ""}
+          />
+          <label htmlFor="name">How Many Would You Like?</label>
+          <input
+            name="bottle_quantity"
+            id="bottle_quantity"
+            value={itemData.bottle_quantity}
+            onChange={handleChange}
+            className={itemData.bottle_quantity.length === 0 ? "invalid__form__input" : ""}
+          />
+          <label htmlFor="name">How Long Would You Like It Aged?</label>
+          <input
+            name="age_time"
+            id="age_time"
+            value={itemData.age_time}
+            onChange={handleChange}
           />
           <p className="required">* required</p>
-          <p>
-            Preview: {itemData.title} - {itemData.owner}
-          </p>
           <button
             className="submit__button"
             type="submit"
             disabled={
-              itemData.title.length === 0 || itemData.owner.length === 0
+              itemData.spirit_type.length === 0
+              || itemData.bottle_type.length === 0
+              || itemData.bottle_quantity.length === 0
             }
           >
             Submit

@@ -1,18 +1,21 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import "./NewOrderForm.css";
+// import "./NewOrderForm.css";
 
-const NeworderForm = ({ addOrderCallback }) => {
+const NewOrderForm = ({ addOrderCallback }) => {
   const [orderData, setOrderData] = useState({
-    title: "",
-    owner: "",
+    delivery_date: "",
+    status: "processing order",
   });
 
   const submitOrderData = (e) => {
     e.preventDefault();
 
     addOrderCallback(orderData);
-    setOrderData({ title: "", owner: "" });
+    setOrderData({
+      delivery_date: "",
+      status: "processing order",
+    });
   };
 
   const handleChange = (e) => {
@@ -22,33 +25,25 @@ const NeworderForm = ({ addOrderCallback }) => {
   return (
     <form onSubmit={submitOrderData}>
       <section>
-        <div className="new__order__fields">
-          <label htmlFor="name">Order Name</label>
+        <div>
+          <label htmlFor="name">Update Delivery Date</label>
           <input
-            name="title"
-            id="title"
-            value={orderData.title}
+            name="delivery_date"
+            id="delivery_date"
+            value={orderData.delivery_date}
             onChange={handleChange}
-            className={orderData.title.length === 0 ? "invalid__form__input" : ""}
           />
-          <label htmlFor="name">Your Name</label>
+          <label htmlFor="name">Update Order Status</label>
           <input
-            name="owner"
-            id="owner"
-            value={orderData.owner}
+            name="status"
+            id="status"
+            value={orderData.status}
             onChange={handleChange}
-            className={orderData.owner.length === 0 ? "invalid__form__input" : ""}
           />
           <p className="required">* required</p>
-          <p>
-            Preview: {orderData.title} - {orderData.owner}
-          </p>
           <button
             className="submit__button"
             type="submit"
-            disabled={
-              orderData.title.length === 0 || orderData.owner.length === 0
-            }
           >
             Submit
           </button>
