@@ -1,7 +1,7 @@
 import React from "react";
 import Order from "./Order";
 import PropTypes from "prop-types";
-import OrderList from "./ComponentsCss/OrderList";
+import OrderListCss from "./ComponentsCss/OrderList";
 
 
 const OrderList = (props) => {

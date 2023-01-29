@@ -1,9 +1,10 @@
+import OrderList from "../Components/OrderList";
 
 
 const Order = () => {
   return (
     <div>
-      Hello from Order page
+      <OrderList/>
     </div>
   );
 };

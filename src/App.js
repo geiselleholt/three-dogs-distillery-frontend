@@ -32,8 +32,8 @@ export const routes = [
     element: <SignUp/>,
   },
   {
-    path: "/order",
-    element: <Order/>,
+    path: "/ordepager",
+    element: <OrderPage/>,
   },
   {
     path: "/label",
