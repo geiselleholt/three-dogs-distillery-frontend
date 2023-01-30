@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import NewLabelForm from "./ComponentsCss/NewLabelForm";
 
 const NewLabelForm = ({ addLabelCallback }) => {
   const [labelData, setLabelData] = useState({

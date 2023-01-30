@@ -1,12 +1,12 @@
 // import { useEffect, useState } from "react";
 // import axios from "axios";
-
+// import Navigate from "react-router-dom";
 import "./App.css";
 import Home from "./Pages/Home";
 import LogIn from "./Pages/Login";
 import SignUp from "./Pages/SignUp";
-import Order from "./Pages/Order";
-import Label from "./Pages/Label";
+import OrderPage from "./Pages/OrderPage";
+import Label from "./Pages/LabelPage";
 import ViewCart from "./Pages/ViewCart";
 import ThankYou from "./Pages/ThankYou";
 import Contact from "./Pages/Contact";
@@ -15,8 +15,18 @@ import ViewOrder from "./Pages/ViewOrder";
 import Admin from "./Pages/Admin";
 import Error from "./Pages/Error";
 
+// const [loggedIn, setLoggedIn] = useState(False);
 
 
+// const logInCustomer = (user_name) => {
+//   setLoggedIn(loggedIn => loggedIn.map(customer => {
+//     if(customer.user_name === user_name) {
+//       return {...customer, loggedIn: !customer.loggedIn};
+//     } else {
+//       return customer;
+//     }
+//   }));
+// };
 
 export const routes = [
   {
@@ -25,14 +35,14 @@ export const routes = [
   },
   {
     path: "/login",
-    element: <LogIn/>,
+    element: <LogIn />
   },
   {
     path: "/signup",
     element: <SignUp/>,
   },
   {
-    path: "/ordepager",
+    path: "/orderpage",
     element: <OrderPage/>,
   },
   {
