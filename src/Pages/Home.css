@@ -1,27 +1,31 @@
-.top {
-    background-image: url("/src/images/red_table.jpg");
-    width: 1450px;
-    height: 1100px;
-}
 
 .home__header {
-    font-family:monospace;
+    font-family:'Courier New', Courier, monospace;
     font-size:2rem;
     -webkit-text-stroke: 1px black;
     color: crimson;
     display: flex;
     justify-content: space-evenly;
     padding: 20pt;
-    background-color: blanchedalmond;
-    opacity: 80%;
+    background:-webkit-linear-gradient(tan 50%,red 100%);
+}
+
+.burger__menu {
+    color: crimson;
+    font-size: xx-large;
 }
 
 .processes {
+    background-image: url("/src/images/red_table.jpg");
+    width: 1450px;
+    height: 1050px;
     padding: 20pt;
+    font-family:'Courier New', Courier, monospace;
     font-size: x-large;
     font-weight: bolder;
-    color: antiquewhite;
-    text-align: center;
+    color: white;
+    -webkit-text-stroke: 1px white;
+    justify-content: baseline;
 }
 
 .how__to {
@@ -29,11 +33,12 @@
     padding: 20pt;
     width: 1400px;
     height: 1000px;
-    font-size: xx-large;
-    text-align: center;
-    color: crimson;
-    -webkit-text-stroke: 1px black;
-
+    font-family:'Courier New', Courier, monospace;
+    font-size: x-large;
+    font-weight: bolder;
+    text-align:justify;
+    color: red;
+    justify-content: baseline;
 }
 
 .home__footer {
@@ -44,7 +49,7 @@
     color: crimson;
     display: flex;
     justify-content: space-evenly;
-    background-color: tan;
+    background:-webkit-linear-gradient(tan 50%,red 100%);
     font-size: 20pt;
     width: 1450px;
 }
@@ -66,3 +71,10 @@
     color: blueviolet;
 }
 
+.how_to_links {
+    color: white;
+}
+
+.how_to_links:hover {
+    color: white;
+}

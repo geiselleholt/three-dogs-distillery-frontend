@@ -1,0 +1,174 @@
+.order__header, .order__footer {
+    font-family:'Courier New', Courier, monospace;
+    font-size:2rem;
+    -webkit-text-stroke: 1px black;
+    color: crimson;
+    display: flex;
+    padding: 5pt;
+    justify-content: space-evenly;
+    background:-webkit-linear-gradient(tan 50%,red 100%);
+}
+
+.order {
+    padding: 20pt;
+}
+.titles {
+    font-family:monospace;
+    font-size:2rem;
+    -webkit-text-stroke: 1px black;
+    color: crimson;
+    padding-top: 30pt;
+    border: 2px solid brown;
+    box-shadow: -15px 7px 1px brown;
+}
+
+.spirit {
+    display: flex;
+    justify-content:space-between;
+    font-size: 15pt;
+}
+
+.each__spirit {
+    width: 210px;
+    height: 200px;
+    font-size:1.25rem;
+    background-color: tan;
+    color: crimson;
+    -webkit-text-stroke: 1px black;
+    border: 2px solid brown;
+    box-shadow: -15px 7px 1px brown;
+}
+
+.cherry {
+    background-image: url("/src/images/cherry.jpg");
+    width: 210px;
+    height: 140px;
+    color: white;
+    -webkit-text-stroke: 1px black;
+    font-weight: bold;
+    font-size:2rem;
+    border: 2px solid brown;
+    box-shadow: -15px 7px 1px brown;
+}
+
+.apple {
+    background-image: url("/src/images/apple.jpg");
+    width: 210px;
+    height: 140px;
+    color: white;
+    -webkit-text-stroke: 1px black;
+    font-size:2rem;
+    font-weight: bold;
+    border: 2px solid brown;
+    box-shadow: -15px 7px 1px brown;
+}
+
+.citrus {
+    background-image: url("/src/images/citrus.jpeg");
+    width: 210px;
+    height: 140px;
+    color: white;
+    -webkit-text-stroke: 1px black;
+    font-size:2rem;
+    font-weight: bold;
+    border: 2px solid brown;
+    box-shadow: -15px 7px 1px brown;
+}
+
+.candy {
+    background-image: url("/src/images/candy.jpg");
+    width: 210px;
+    height: 140px;
+    color: white;
+    -webkit-text-stroke: 1px black;
+    font-size:2rem;
+    font-weight: bold;
+    border: 2px solid brown;
+    box-shadow: -15px 7px 1px brown;
+}
+
+.espresso {
+    background-image: url("/src/images/espresso.jpg");
+    width: 210px;
+    height: 140px;
+    color: white;
+    -webkit-text-stroke: 1px black;
+    font-size:2rem;
+    font-weight: bold;
+    border: 2px solid brown;
+    box-shadow: -15px 7px 1px brown;
+}
+
+.standard {
+    background-image: url("/src/images/standard.jpeg");
+    width: 210px;
+    height: 200px;
+    font-size:1.5rem;
+    font-weight: bold;
+    border: 2px solid brown;
+    box-shadow: -15px 7px 1px brown;
+}
+
+.fancy {
+    background-image: url("/src/images/fancy.jpeg");
+    width: 210px;
+    height: 200px;
+    font-size:1.5rem;
+    font-weight: bold;
+    border: 2px solid brown;
+    box-shadow: -15px 7px 1px brown;
+}
+
+.mason {
+    background-image: url("/src/images/mason_jar.jpeg");
+    width: 210px;
+    height: 200px;
+    font-size:1.5rem;
+    font-weight: bold;
+    border: 2px solid brown;
+    box-shadow: -15px 7px 1px brown;
+}
+
+.mini {
+    background-image: url("/src/images/minis.jpg");
+    width: 210px;
+    height: 200px;
+    font-size:1.5rem;
+    font-weight: bold;
+    border: 2px solid brown;
+    box-shadow: -15px 7px 1px brown;
+}
+
+.mini__mason {
+    background-image: url("/src/images/mini_mason.jpg");
+    width: 210px;
+    height: 200px;
+    font-size:1.5rem;
+    font-weight: bold;
+    border: 2px solid brown;
+    box-shadow: -15px 7px 1px brown;
+}
+
+.button {
+    text-align: center;
+    padding: 20pt;
+}
+
+.add__button {
+    font-size:1.5rem;
+    font-weight: bold;
+    background-color: green;
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+
+.preview {
+    font-family:monospace;
+    font-size:2rem;
+    -webkit-text-stroke: 1px black;
+    color: green;
+    -webkit-text-stroke: 1px black;
+    padding-top: 30pt;
+    border: 2px solid green;
+    box-shadow: -15px 7px 1px green;
+}

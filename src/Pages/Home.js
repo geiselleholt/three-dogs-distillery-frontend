@@ -1,26 +1,23 @@
 import "./Home.css";
-import { bubble as Menu } from 'react-burger-menu';
+// import { push as Menu } from 'react-burger-menu';
 import { motion } from "framer-motion";
 import three_dogs_logo from "../images/three_dogs_logo.jpg";
 
 
 const Home = () => {
   return (
-    <div>
-      <div className="top">
+    <div id="outer-container" >
+      {/* <Menu pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } >
+          <a className="burger__menu" href="/orderpage">Order Now</a>
+          <a className="burger__menu" href="/login">Log In</a>
+          <a className="burger__menu" href="/signup">Sign Up</a>
+          <a className="burger__menu" href="/viewcart">View Cart</a>
+          <a className="burger__menu" href="/aboutus">About Us</a>
+          <a className="burger__menu" href="/contact">Contact Us</a>
+          <a className="burger__menu" href="/vieworder">View Order</a>
+      </Menu> */}
+      {/* <main id="page-wrap"> */}
         <h1 className="home__header">
-          <section>
-            Menu
-            <Menu className="burger__button">
-              <a href="/orderpage">Order Now</a>
-              <a href="/login">Log In</a>
-              <a href="/signup">Sign Up</a>
-              <a href="/viewcart">View Cart</a>
-              <a href="/aboutus">About Us</a>
-              <a href="/contact">Contact Us</a>
-              <a href="/vieworder">View Order</a>
-            </Menu>
-          </section>
           <motion.div
           animate={{rotate: 360}}
           transition={{ repeat: 2, duration: 3}}
@@ -53,13 +50,12 @@ const Home = () => {
             Or you can make an aged bottle of Cherry Bourbon in a fancy botlle for your Dad's birthday. The possibilites are endless!
           </p>
                   <section>
-          <a href="/orderpage">Order Now</a>
+          <a className="how_to_links" href="/orderpage">Order Now</a>
           </section>
           <section>
-          <a href="/viewcart">Contact Nick</a>
+          <a className="how_to_links" href="/contact">Contact Nick</a>
           </section>
-        </section>
-      </div>
+        </section>  
       <section className="how__to">
         <p>
            Nick is a true artisan and artist. He's been making his own alchohol for over 20 years and he's finally
@@ -86,6 +82,7 @@ const Home = () => {
         </section>
         <section>Follow Us Logos</section>
       </footer>
+      {/* </main> */}
     </div>
   );
 };
