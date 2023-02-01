@@ -1,0 +1,8 @@
+.error {
+    font-family:'Courier New', Courier, monospace;
+    font-size:2rem;
+    -webkit-text-stroke: 1px black;
+    color: crimson;
+    padding: 20pt;
+    background:-webkit-linear-gradient(tan 50%,red 100%);
+}

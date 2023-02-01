@@ -1,5 +1,6 @@
 import "./Home.css";
 // import { push as Menu } from 'react-burger-menu';
+import Userfront from "@userfront/react";
 import { motion } from "framer-motion";
 import three_dogs_logo from "../images/three_dogs_logo.jpg";
 
@@ -26,16 +27,12 @@ const Home = () => {
           </motion.div>
           <section>
             <a className="links" href="/login">Log In</a>
-          </section>
-          <section>
+            <a className="links" href="/reset">Reset Password</a>
             <a className="links" href="/signup">Sign Up</a>
-          </section>
-          <section>
-          <a className="links" href="/orderpage">Order Now</a>
-          </section>
-          <section>
-          <a className="links" href="/viewcart">Cart</a>
-          </section>
+            <a className="links" href="/orderpage">Order Now</a>
+            <a className="links" href="/dashboard">Cart</a>
+            <button onClick={Userfront.logout}>Logout</button>
+          </section>  
         </h1>
         <section className="processes">
           <p>
