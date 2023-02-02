@@ -1,14 +1,22 @@
 
 .home__header {
-    font-family:'Courier New', Courier, monospace;
-    font-size:2rem;
-    -webkit-text-stroke: 1px black;
-    color: crimson;
     display: flex;
     justify-content: space-evenly;
     padding: 20pt;
     background:-webkit-linear-gradient(tan 50%,red 100%);
 }
+
+.title {
+    font-size:3rem;
+    padding-left: 100pt;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.header__buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 
 .burger__menu {
     color: crimson;
@@ -17,7 +25,7 @@
 
 .processes {
     background-image: url("/src/images/red_table.jpg");
-    width: 1450px;
+    /* width: 1450px; */
     height: 1050px;
     padding: 20pt;
     font-family:'Courier New', Courier, monospace;
@@ -31,7 +39,7 @@
 .how__to {
     background-image: url("/src/images/moonshining.jpeg");
     padding: 20pt;
-    width: 1400px;
+    /* width: 1400px; */
     height: 1000px;
     font-family:'Courier New', Courier, monospace;
     font-size: x-large;
@@ -42,16 +50,10 @@
 }
 
 .home__footer {
-    font-family:monospace;
-    min-height: 10vh;
-    font-size:3rem;
-    -webkit-text-stroke: 1px black;
-    color: crimson;
     display: flex;
     justify-content: space-evenly;
+    padding: 20pt;
     background:-webkit-linear-gradient(tan 50%,red 100%);
-    font-size: 20pt;
-    width: 1450px;
 }
 
 
@@ -63,12 +65,9 @@
     top: 5%;
   }
 
-.links {
+.buttons {
+    font-size: 20pt;
     color: crimson;
-}
-
-.links:hover {
-    color: blueviolet;
 }
 
 .how_to_links {

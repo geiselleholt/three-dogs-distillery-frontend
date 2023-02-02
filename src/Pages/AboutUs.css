@@ -1,0 +1,54 @@
+.emma {
+    background-image: url("/src/images/emma.jpg");
+    width: 550px;
+    height: 550px;
+    padding: 20pt;
+    font-family:'Courier New', Courier, monospace;
+    font-size: x-large;
+    font-weight: bolder;
+    justify-content: baseline;
+}
+
+.bandit {
+    background-image: url("/src/images/bandit2.jpeg");
+    width: 450px;
+    height: 650px;
+    padding: 20pt;
+    font-family:'Courier New', Courier, monospace;
+    font-size: x-large;
+    font-weight: bolder;
+    justify-content: baseline;
+}
+
+.brandy {
+    background-image: url("/src/images/Brandie_Chris.jpeg");
+    width: 400px;
+    height: 450px;
+    padding: 20pt;
+    font-family:'Courier New', Courier, monospace;
+    font-size: x-large;
+    font-weight: bolder;
+    justify-content: baseline;
+}
+
+.nick {
+    background-image: url("/src/images/nick.jpeg");
+    width: 550px;
+    height: 550px;
+    padding: 20pt;
+    font-family:'Courier New', Courier, monospace;
+    font-size: x-large;
+    font-weight: bolder;
+    justify-content: baseline;
+}
+
+.dogs {
+    background-image: url("/src/images/bronco_bottles.jpg");
+    width: 680px;
+    height: 500px;
+    padding: 20pt;
+    font-family:'Courier New', Courier, monospace;
+    font-size: x-large;
+    font-weight: bolder;
+    justify-content: baseline;
+}

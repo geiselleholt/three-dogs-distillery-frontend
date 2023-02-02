@@ -12,11 +12,26 @@ const Order = () => {
         >
           <img alt="spinning logo" src={ three_dogs_logo } width={170} height={120}/>
         </motion.div>
+        <p className="title">Three Dog's Distillery Order Page</p>
         <section>
-          <a className="links" href="/login">View Cart</a>
+          <a className="links" href="/">
+            <button className="buttons">Home</button>
+          </a>
         </section>
         <section>
-          <a className="links" href="/login">Log In</a>
+          <a className="links" href="/viewcart">
+            <button className="buttons">View Cart</button>
+          </a>
+        </section>
+        <section>
+          <a className="links" href="/login">
+            <button className="buttons">Log In</button>
+          </a>
+        </section>
+        <section>
+          <a className="links" href="/signup">
+            <button className="buttons">Sign Up</button>
+          </a>
         </section>
       </h1>
       <section className="order">
@@ -59,27 +74,32 @@ const Order = () => {
         </p>
       </section>
       <section className="button">
-        <button className="add__button">
-          Add to Cart
-        </button>
+        <a href="/label">
+          <button className="label__button">
+            Design Your Label
+          </button>
+        </a>
       </section>
       <footer className="order__footer">
         <section>
         <img alt="spinning logo" src={ three_dogs_logo } width={200} height={100}/>
         </section>
         <section>
-          <a className="links" href="/orderpage">Order Now</a>
+          <a href="/">
+            <button className="buttons">Home</button>
+          </a>
         </section>
         <section>
-          <a className="links" href="/contact">Contact Us</a>
+          <a href="/contact">
+            <button className="buttons">Contact Nick</button>
+          </a>
         </section>
         <section>
-          <a className="links" href="/aboutus">About Us</a>
+          <a href="/aboutus">
+            <button className="buttons">About Us</button>
+          </a>
         </section>
-        <section>
-          <a className="links" href="/vieworder">View Order</a>
-        </section>
-        <section>Follow Us Logos</section>
+        {/* <section>Follow Us Logos</section> */}
       </footer>
     </div>
   );

@@ -25,13 +25,31 @@ const Home = () => {
           >
             <img alt="spinning logo" src={ three_dogs_logo } width={170} height={120}/>
           </motion.div>
-          <section>
-            <a className="links" href="/login">Log In</a>
-            <a className="links" href="/reset">Reset Password</a>
-            <a className="links" href="/signup">Sign Up</a>
-            <a className="links" href="/orderpage">Order Now</a>
-            <a className="links" href="/dashboard">Cart</a>
-            <button onClick={Userfront.logout}>Logout</button>
+          <p className="title">Welcome to Three Dog's Distillery</p>
+          <section className="header__buttons">
+            <section>
+            <a href="/login">
+              <button className="buttons">Log In</button>
+            </a>
+            </section>
+            <section>
+              <a href="/signup">
+                <button className="buttons">Sign Up</button>
+              </a>
+            </section>
+            <section>
+              <a href="/orderpage">
+                <button className="buttons">Order Now</button>
+              </a>
+            </section>
+            <section>
+              <a href="/viewcart">
+                <button className="buttons">View Cart</button>
+              </a>
+            </section>
+            <section>
+              <button className="buttons" onClick={Userfront.logout}>Log Out</button>
+            </section>
           </section>  
         </h1>
         <section className="processes">
@@ -47,10 +65,14 @@ const Home = () => {
             Or you can make an aged bottle of Cherry Bourbon in a fancy botlle for your Dad's birthday. The possibilites are endless!
           </p>
                   <section>
-          <a className="how_to_links" href="/orderpage">Order Now</a>
+          <a className="how_to_links" href="/orderpage">
+            <button className="buttons">Order Now</button>
+          </a>
           </section>
           <section>
-          <a className="how_to_links" href="/contact">Contact Nick</a>
+          <a className="how_to_links" href="/contact">
+            <button className="buttons">Contact Nick</button>
+          </a>
           </section>
         </section>  
       <section className="how__to">
@@ -66,18 +88,26 @@ const Home = () => {
         <img alt="spinning logo" src={ three_dogs_logo } width={200} height={100}/>
         </section>
         <section>
-          <a className="links" href="/orderpage">Order Now</a>
+          <a href="/orderpage">
+            <button className="buttons">Order Now</button>
+          </a>
         </section>
         <section>
-          <a className="links" href="/contact">Contact Us</a>
+          <a href="/contact">
+            <button className="buttons">Contact Nick</button>
+          </a>
         </section>
         <section>
-          <a className="links" href="/aboutus">About Us</a>
+          <a href="/aboutus">
+            <button className="buttons">About Us</button>
+          </a>
         </section>
         <section>
-          <a className="links" href="/vieworder">View Order</a>
+          <a href="/vieworder">
+            <button className="buttons">View Order</button>
+          </a>
         </section>
-        <section>Follow Us Logos</section>
+        {/* <section>Follow Us Logos</section> */}
       </footer>
       {/* </main> */}
     </div>

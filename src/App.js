@@ -1,5 +1,7 @@
 import { Navigate, useLocation } from "react-router-dom";
 import Userfront from "@userfront/react";
+import { motion } from "framer-motion";
+import three_dogs_logo from "./images/three_dogs_logo.jpg";
 import "./App.css";
 import Home from "./Pages/Home";
 import OrderPage from "./Pages/OrderPage";
@@ -21,13 +23,7 @@ const SignupForm = Userfront.build({
 const LoginForm = Userfront.build({
   toolId: "mlbdmll",
 });
-const PasswordResetForm = Userfront.build({
-  toolId: "rankrnr",
-});
 
-// const LogoutButton = Userfront.build({
-//   toolId: "orlbkln"
-// });
 
 export const routes = [
   {
@@ -35,16 +31,8 @@ export const routes = [
     element: <Home/>
   },
   {
-    path: "/dashboard",
-    element: <Dashboard/>
-  },
-  {
     path: "/login",
     element: <Login />
-  },
-  {
-    path: "/reset",
-    element: <PasswordReset />
   },
   {
     path: "/signup",
@@ -94,9 +82,17 @@ export const routes = [
 function SignUp() {
   return (
     <div>
+      <motion.div
+        animate={{rotate: 360}}
+        transition={{ repeat: 2, duration: 3}}
+        >
+          <img alt="spinning logo" src={ three_dogs_logo } width={170} height={120}/>
+      </motion.div>
       <SignupForm />
       <section>
-        <a className="links" href="/">Home</a>
+        <a className="links" href="/">
+          <button className="buttons">Home</button>
+        </a>
       </section>
     </div>
     
@@ -107,39 +103,24 @@ function SignUp() {
 function Login() {
   return (
     <div>
+      <motion.div
+        animate={{rotate: 360}}
+        transition={{ repeat: 2, duration: 3}}
+        >
+          <img alt="spinning logo" src={ three_dogs_logo } width={170} height={120}/>
+      </motion.div>
       <LoginForm />
       <section>
-        <a className="links" href="/">Home</a>
+        <a className="links" href="/">
+          <button className="buttons">Home</button>
+        </a>
       </section>
     </div>
   );
 }
 
 
-function PasswordReset() {
-  return (
-    <div>
-      <PasswordResetForm />
-      <section>
-        <a className="links" href="/">Home</a>
-      </section>
-    </div>
-  );
-}
 
-function Dashboard() {
-  const userData = JSON.stringify(Userfront.user, null, 2);
-  return (
-    <div>
-      <h2>Dashboard</h2>
-      <pre>{userData}</pre>
-      <button onClick={Userfront.logout}>Logout</button>
-      <section>
-        <a className="links" href="/">Home</a>
-      </section>
-    </div>
-  );
-}
 
 
 function RequireAuth({ children }) {

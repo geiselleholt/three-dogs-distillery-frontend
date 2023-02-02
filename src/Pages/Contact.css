@@ -1,0 +1,12 @@
+.contact {
+    background-image: url("/src/images/bottles.jpg");
+    padding: 20pt;
+    height: 750pt;
+    padding: 20pt;
+    font-family:'Courier New', Courier, monospace;
+    font-size: x-large;
+    font-weight: bolder;
+    /* color: white; */
+    -webkit-text-stroke: 1px red;
+    justify-content: baseline;
+}
