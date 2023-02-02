@@ -1,0 +1,54 @@
+.new__label__fields {
+    display: grid;
+    font-size:1.5rem;
+    font-weight: bold;
+    border: 2px solid brown;
+    box-shadow: -15px 7px 1px brown;
+    padding: 20pt;
+}
+
+.preview__section {
+    border: solid;
+    border-color: black;
+}
+
+.submit__button {
+    font-size:1.5rem;
+    font-weight: bold;
+    background-color: green;
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+
+.arial {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: x-large;
+}
+
+.cursive {
+    font-family: cursive;
+    font-size: x-large;
+}
+
+.impact {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: x-large;
+}
+
+.fantasy {
+    font-family:fantasy;
+    font-size: x-large;
+}
+
+.roman {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+}
+
+.button__section {
+    padding: 20pt;
+    text-align: center;
+}
+
+
+

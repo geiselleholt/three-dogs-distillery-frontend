@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import "./NewLabelForm.css";
 
 const NewLabelForm = ({ addLabelCallback }) => {
   const [labelData, setLabelData] = useState({
@@ -26,16 +27,9 @@ const NewLabelForm = ({ addLabelCallback }) => {
   return (
     <form onSubmit={submitLabelData}>
       <section>
-        <div className="new__label__fields">
-          <label htmlFor="name">What kind of Font would you like?</label>
-          <input
-            name="font"
-            id="font"
-            value={labelData.font}
-            onChange={handleChange}
-            className={labelData.font.length === 0 ? "invalid__form__input" : ""}
-          />
-          <label htmlFor="name">What would you like your Bottle Name to be?</label>
+        <div >
+          <section className="new__label__fields">
+          <label htmlFor="name">Choose Your Bottle's Name</label>
           <input
             name="name"
             id="name"
@@ -43,17 +37,40 @@ const NewLabelForm = ({ addLabelCallback }) => {
             onChange={handleChange}
             className={labelData.name.length === 0 ? "invalid__form__input" : ""}
           />
-          <label htmlFor="name">Would you like to add a message on your bottle?</label>
+          <section>
+          <p>Choose Your Bottle Name's Font</p>
+            <button className="arial">Arial</button>
+            <button className="cursive">Cursive</button>
+            <button className="fantasy">Fantasy</button>
+            <button className="impact">Impact</button>
+            <button className="roman">Roman</button>
+          </section>
+          </section>
+          <section className="new__label__fields">
+          <label htmlFor="name">Choose Your Message (optional)</label>
           <input
             name="message"
             id="message"
             value={labelData.message}
             onChange={handleChange}
           />
-          <p className="required">* required</p>
-          <p>
-            Preview: {labelData.font} - {labelData.name}
-          </p>
+          <section>
+            <p>Choose Your Message's Font</p>
+            <button className="arial">Arial</button>
+            <button className="cursive">Cursive</button>
+            <button className="fantasy">Fantasy</button>
+            <button className="impact">Impact</button>
+            <button className="roman">Roman</button>
+          </section>
+          </section>
+          <section className="new__label__fields">
+          <p>Preview:</p>
+          <section className="preview__section">
+          <p>{labelData.name}</p>
+          <p>{labelData.message}</p>
+          </section>
+          </section>
+          <section className="button__section">
           <button
             className="submit__button"
             type="submit"
@@ -61,8 +78,9 @@ const NewLabelForm = ({ addLabelCallback }) => {
               labelData.font.length === 0 || labelData.name.length === 0
             }
           >
-            Submit
+            Add to Order to Cart
           </button>
+          </section>
         </div>
       </section>
     </form>
