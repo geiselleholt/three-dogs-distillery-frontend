@@ -2,6 +2,7 @@ import "./Contact.css";
 import Userfront from "@userfront/react";
 import { motion } from "framer-motion";
 import three_dogs_logo from "../images/three_dogs_logo.jpg";
+import bottles from "../images/bottles.jpg";
 
 const ContactPage = () => {
   return (
@@ -41,6 +42,7 @@ const ContactPage = () => {
           </section>  
         </h1>
       <section className="contact">
+        <img alt="bottles" src={bottles}></img>
         <p>
           Call Nick at (720)-467-0390
         </p>

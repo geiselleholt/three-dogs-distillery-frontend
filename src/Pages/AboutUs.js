@@ -2,6 +2,11 @@ import "./AboutUs.css";
 import Userfront from "@userfront/react";
 import { motion } from "framer-motion";
 import three_dogs_logo from "../images/three_dogs_logo.jpg";
+import nick from "../images/nick.jpeg";
+import emma from "../images/emma.jpg";
+import bandit2 from "../images/bandit2.jpeg";
+import Brandie_Chris from "../images/Brandie_Chris.jpeg";
+import bronco_bottles from "../images/bronco_bottles.jpg";
 
 const AboutUs = () => {
   return (
@@ -42,6 +47,7 @@ const AboutUs = () => {
         </h1>
       <section className="about">
         <section className="dogs">
+        <img alt="bottles" src={bronco_bottles}></img>
           About Three Dog's Distillery
           <p>Three Dog's Distillery is Nick's pride and joy. He is finally turning his long time interest
             in creating master class spirits into his dream business. Every bottle he makes is made with
@@ -50,6 +56,7 @@ const AboutUs = () => {
           </p>
         </section>
         <section className="nick">
+          <img alt="nick" src={nick}></img>
           About Nick
           <p>Nick is a true artist. When he's not fermenting or aging or distilling, he's forging custom
             made knives for his friends and family. He is also a DJ and an acomplished dancer. Most nights
@@ -58,7 +65,10 @@ const AboutUs = () => {
             every bottle he makes.
           </p>
         </section>
+        </section>
+        <section className="about__dogs">
         <section className="brandy">
+        <img alt="brandie and chris" src={Brandie_Chris}></img>
           About Brandie Rae
           <p>Pictured with her beautiful mama Chris, also Nick's wife, Brandie is an well aged beauty.
             She had a little bit of an attitude but she can be nice and fun when she wants to be. Nick
@@ -67,6 +77,7 @@ const AboutUs = () => {
           </p>
         </section>
         <section className="bandit">
+        <img alt="bandit" src={bandit2}></img>
           About Bandit
           <p>Bandit is playful and smart! He's fast and tough and is always ready 
             to chase a ball or pull a rope or find hidden toys. Nick created Bandit's
@@ -75,6 +86,7 @@ const AboutUs = () => {
 
         </section>
         <section className="emma">
+        <img alt="emma" src={emma}></img>
           About Emma
           <p>Emma is sweet and loves to eat! She was the runt of the litter 
             but she's grown- more wide than up- to be healthy and strong.

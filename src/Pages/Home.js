@@ -3,6 +3,8 @@ import "./Home.css";
 import Userfront from "@userfront/react";
 import { motion } from "framer-motion";
 import three_dogs_logo from "../images/three_dogs_logo.jpg";
+import red_table from "../images/red_table.jpg";
+import moonshiining from "../images/moonshining.jpeg";
 
 
 const Home = () => {
@@ -53,18 +55,17 @@ const Home = () => {
           </section>  
         </h1>
         <section className="processes">
+          <img alt="bottle" src={red_table}></img>
           <p>
             Three Dog's Distillery lets you design your own custom made spirits!
-          </p>
-          <p>
-          Choose from 5 different spirits and 5 optional flavor infusions. Then choose what kind
+
+            Choose from 5 different spirits and 5 optional flavor infusions. Then choose what kind
             of bottle you'd like and desgin you own custom made label with an optional message!
-          </p>
-          <p>
+
             You can make 100 mini bottles of your favorite flavor of vodka for your wedding with a message for your guests.
             Or you can make an aged bottle of Cherry Bourbon in a fancy botlle for your Dad's birthday. The possibilites are endless!
           </p>
-                  <section>
+        <section>
           <a className="how_to_links" href="/orderpage">
             <button className="buttons">Order Now</button>
           </a>
@@ -76,6 +77,7 @@ const Home = () => {
           </section>
         </section>  
       <section className="how__to">
+      <img alt="mason jar" src={moonshiining}></img>
         <p>
            Nick is a true artisan and artist. He's been making his own alchohol for over 20 years and he's finally
           fullfilling his dream of sharing his spirits with the world. He handcrafts every bottle himself using his 
