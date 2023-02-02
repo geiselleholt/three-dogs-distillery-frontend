@@ -1,15 +1,31 @@
 .new__label__fields {
     display: grid;
-    font-size:1.5rem;
+    font-size:1.75rem;
+    -webkit-text-stroke: 1px black;
+    color: crimson;
     font-weight: bold;
     border: 2px solid brown;
     box-shadow: -15px 7px 1px brown;
     padding: 20pt;
 }
 
+.field {
+    font-size: large;
+}
+
+.optional {
+    font-size:1.1rem;
+    -webkit-text-stroke: 1px black;
+    color: crimson;
+}
+
 .preview__section {
     border: solid;
     border-color: black;
+    text-align: center;
+    color: black;
+    width: 300pt;
+    height: 200pt;
 }
 
 .submit__button {
@@ -22,33 +38,82 @@
 
 .arial {
     font-family:Arial, Helvetica, sans-serif;
-    font-size: x-large;
+    font-size: large;
+}
+
+.name_arial {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 30pt;
+}
+
+.message_arial {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 15pt;
+}
+
+.name_cursive {
+    font-family: cursive;
+    font-size: 30pt;
+}
+
+.message_cursive {
+    font-family: cursive;
+    font-size: 15pt;
 }
 
 .cursive {
     font-family: cursive;
-    font-size: x-large;
+    font-size: large;
+}
+
+.name_impact {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30pt;
+}
+
+.message_impact {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 15pt;
 }
 
 .impact {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: x-large;
+    font-size: large;
+}
+
+.name_fantasy {
+    font-family:fantasy;
+    font-size: 30pt;
+}
+
+.message_fantasy {
+    font-family:fantasy;
+    font-size: 15pt;
 }
 
 .fantasy {
     font-family:fantasy;
-    font-size: x-large;
+    font-size: large;
+}
+
+.name_roman {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30pt;
+}
+
+.message_roman {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15pt;
 }
 
 .roman {
     font-family: 'Times New Roman', Times, serif;
-    font-size: x-large;
+    font-size: large;
 }
 
 .button__section {
     padding: 20pt;
     text-align: center;
 }
-
 
 

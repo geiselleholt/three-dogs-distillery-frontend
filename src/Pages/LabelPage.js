@@ -35,11 +35,15 @@ const Label = () => {
           </a>
         </section>
       </h1>
-      <section>
-        <p className="label__title">Customize Your Label</p>
         <section className="label__form">
         <NewLabelForm/>
         </section>
+      <section className="button">
+            <a href="/viewcart">
+              <button className="label__button">
+                Add to Cart
+              </button>
+            </a>
       </section>
       <footer className="label__footer">
         <section>

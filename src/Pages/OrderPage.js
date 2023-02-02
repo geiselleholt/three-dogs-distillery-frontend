@@ -1,6 +1,7 @@
 import "./OrderPage.css";
 import { motion } from "framer-motion";
 import three_dogs_logo from "../images/three_dogs_logo.jpg";
+import NewItemForm from "../Components/NewItemForm";
 
 const Order = () => {
   return (
@@ -34,51 +35,13 @@ const Order = () => {
           </a>
         </section>
       </h1>
-      <section className="order">
-        <p className="titles">Choose your Spirit- $100 each- add $50 for Bourbon</p>
-        <section className="spirit">
-          <button className="each__spirit">
-            Brandy- made from all natural fruits, quality sugar, fermented for 2 weeks
-          </button>
-          <button className="each__spirit">
-            Bourbon- made from barley and rye, fermented for 30 days, Aged with chips for 60 days
-          </button>
-          <button className="each__spirit">
-            Whiskey- made with barley, grains. Fermented for 30 days. Aged with chips for 30 days
-          </button>
-          <button className="each__spirit">
-            Moonshine- made with Corn, barley and yeast. Double distilled for smooth taste and quality
-          </button>
-          <button className="each__spirit">
-            Vodka- Made from wheat, rye or potato. Fermented for 30 days. Double distilled
-          </button>
-        </section>
-        <p className="titles">Choose your Flavor- add $50</p>
-        <section className="spirit">
-          <button className="cherry">Cherry </button>
-          <button className="apple">Apple </button>
-          <button className="citrus">Citrus </button>
-          <button className="candy">Watermelon Candy </button>
-          <button className="espresso">Espresso </button>
-        </section>
-        <p className="titles">Choose your Bottle- add $25 for Fancy Bottle</p>
-        <section className="spirit">
-          <button className="fancy">Fancy Bottle</button>
-          <button className="standard">Standard Bottle</button>
-          <button className="mason">Mason Jar</button>
-          <button className="mini">15 Mini Bottles</button>
-          <button className="mini__mason">15 Mini Mason Jars</button>
-        </section>
-        <p className="preview">
-          Preview Your Order: Spirit=   Flavor=   Bottle=
-        </p>
-      </section>
+      <NewItemForm/>
       <section className="button">
-        <a href="/label">
-          <button className="label__button">
-            Design Your Label
-          </button>
-        </a>
+            <a href="/label">
+              <button className="label__button">
+                Design Your Label
+              </button>
+            </a>
       </section>
       <footer className="order__footer">
         <section>
