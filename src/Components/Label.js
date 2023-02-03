@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Label from "./ComponentsCss/Label";
+import "./Label.css";
 
 const Label = (props) => {
   return (

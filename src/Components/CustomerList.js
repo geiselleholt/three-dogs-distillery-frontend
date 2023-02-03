@@ -1,7 +1,7 @@
 import React from "react";
 import Customer from "./Customer";
 import PropTypes from "prop-types";
-import CustomerList from "./ComponentsCss/CustomerList";
+import "./CustomerList.css";
 
 const CustomerList = (props) => {
   return (
@@ -28,13 +28,13 @@ CustomerList.propTypes = {
   customerData: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
-      user_name: PropTypes.string.isRequired,
-      password: PropTypes.string.isRequired,
-      is_admin: PropTypes.boolean.isRequired,
-      first_name: PropTypes.string.isRequired,
-      last_name: PropTypes.string.isRequired,
-      phone_number: PropTypes.string.isRequired,
-      address: PropTypes.string.isRequired,
+      user_name: PropTypes.string,
+      password: PropTypes.string,
+      is_admin: PropTypes.boolean,
+      first_name: PropTypes.string,
+      last_name: PropTypes.string,
+      phone_number: PropTypes.string,
+      address: PropTypes.string,
     })
   ),
 };

@@ -6,8 +6,8 @@ const NewItemForm = ({ addItemCallback }) => {
   const [itemData, setItemData] = useState({
     spirit: "",
     flavor: "",
-    bottle_type: "",
-    bottle_quantity: "",
+    bottle: "",
+    quantity: "",
   });
 
   const submitItemData = (e) => {

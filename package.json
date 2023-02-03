@@ -9,6 +9,8 @@
     "@userfront/react": "^0.3.1",
     "axios": "^1.2.4",
     "framer-motion": "^8.5.4",
+    "@stripe/react-stripe-js":	"^1.0.0",
+    "@stripe/stripe-js":	"^1.0.0",
     "react": "^18.2.0",
     "react-burger-menu": "^3.0.9",
     "react-dom": "^18.2.0",

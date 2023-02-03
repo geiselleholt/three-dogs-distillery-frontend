@@ -4,25 +4,14 @@ import { motion } from "framer-motion";
 import three_dogs_logo from "./images/three_dogs_logo.jpg";
 import "./App.css";
 import Home from "./Pages/Home";
-import OrderPage from "./Pages/OrderPage";
+import OrderPage from "./Pages/ItemPage";
 import Label from "./Pages/LabelPage";
-import ViewCart from "./Pages/ViewCart";
-import ThankYou from "./Pages/ThankYou";
 import Contact from "./Pages/Contact";
 import AboutUs from "./Pages/AboutUs";
 import ViewOrder from "./Pages/ViewOrder";
 import Admin from "./Pages/Admin";
 import Error from "./Pages/Error";
-
-Userfront.init("7n879v6b");
-
-const SignupForm = Userfront.build({
-  toolId: "albombk",
-});
-
-const LoginForm = Userfront.build({
-  toolId: "mlbdmll",
-});
+import ViewCart from "./Pages/ViewCart";
 
 
 export const routes = [
@@ -48,11 +37,7 @@ export const routes = [
   },
   {
     path: "/viewcart",
-    element: <ViewCart/>,
-  },
-  {
-    path: "/thankyou",
-    element: <ThankYou/>,
+    element: <ViewCart/>
   },
   {
     path: "/contact",
@@ -99,6 +84,16 @@ function SignUp() {
   );
 }
 
+// UserFront for OAth
+Userfront.init("7n879v6b");
+
+const SignupForm = Userfront.build({
+  toolId: "albombk",
+});
+
+const LoginForm = Userfront.build({
+  toolId: "mlbdmll",
+});
 
 function Login() {
   return (
@@ -119,17 +114,12 @@ function Login() {
   );
 }
 
-
-
-
-
 function RequireAuth({ children }) {
   let location = useLocation();
   if (!Userfront.tokens.accessToken) {
-    // Redirect to the /login page
     return <Navigate to="/login" state={{ from: location }} replace />;
   }
-
+  
   return children;
 }
 

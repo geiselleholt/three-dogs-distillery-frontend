@@ -1,7 +1,7 @@
 import React from "react";
 import Item from "./Item";
 import PropTypes from "prop-types";
-import ItemList from "./ComponentsCss/ItemList";
+import "./ItemList.css";
 
 
 const ItemList = (props) => {

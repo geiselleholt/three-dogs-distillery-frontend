@@ -1,7 +1,7 @@
 import React from "react";
 import Label from "./Label";
 import PropTypes from "prop-types";
-import LabelList from "./ComponentsCss/LabelList";
+import "./LabelList.css";
 
 
 const LabelList = (props) => {
@@ -14,7 +14,7 @@ const LabelList = (props) => {
           font={label.font}
           name={label.name}
           message={label.message}
-          item_id={order.item_id}
+          item_id={label.item_id}
         />
       ))}
     </ul>
@@ -32,3 +32,5 @@ LabelList.propTypes = {
     })
   ),
 };
+
+export default LabelList;

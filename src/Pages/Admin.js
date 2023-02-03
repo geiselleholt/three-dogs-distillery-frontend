@@ -1,9 +1,13 @@
-
+import LabelList from "../Components/LabelList.js";
+import ItemList from "../Components/ItemList.js";
+import CustomerList from "../Components/CustomerList.js";
 
 const Admin = () => {
   return (
     <div>
-      Hello from Admin page
+      <LabelList/>
+      <ItemList/>
+      <CustomerList/>
     </div>
   );
 };

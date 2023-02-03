@@ -1,9 +1,40 @@
-import "./OrderPage.css";
+import "./ItemPage.css";
 import { motion } from "framer-motion";
 import three_dogs_logo from "../images/three_dogs_logo.jpg";
 import NewItemForm from "../Components/NewItemForm";
+import axios from "axios";
+import { useState } from "react";
 
-const Order = () => {
+
+const getAllItemsApi = async () => {
+  const response = await axios.get(
+    `${process.env.REACT_APP_BACKEND_URL}/items`
+  );
+  return response.data;
+};
+
+
+const Item = () => {
+  const [itemsData, setItemsData] = useState([]);
+
+  const getAllItems = async () => {
+    const items = await getAllItemsApi();
+    setItemsData(items);
+  };
+
+  const addItemData = async (itemForm) => {
+    const response = await axios.post(
+      `${process.env.REACT_APP_BACKEND_URL}/items`,
+      itemForm
+    );
+    const newItem = [...itemsData];
+    newItem.push(response.data.item);
+    setItemsData(newItem);
+
+    return getAllItems();
+  };
+
+
   return (
     <div>
       <h1 className="order__header">
@@ -35,7 +66,9 @@ const Order = () => {
           </a>
         </section>
       </h1>
-      <NewItemForm/>
+      <NewItemForm
+        addItemCallback={addItemData}
+      />
       <section className="button">
             <a href="/label">
               <button className="label__button">
@@ -68,4 +101,4 @@ const Order = () => {
   );
 };
 
-export default Order;
+export default Item;
