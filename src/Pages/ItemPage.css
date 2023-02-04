@@ -162,6 +162,14 @@
     -webkit-text-stroke: 1px black;
 }
 
+.label__button:hover {
+    background-color: brown;
+}
+
+.label__button:focus {
+    background-color: brown;
+}
+
 .preview {
     font-family:monospace;
     font-size:2rem;

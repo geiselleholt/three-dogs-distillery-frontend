@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import three_dogs_logo from "./images/three_dogs_logo.jpg";
 import "./App.css";
 import Home from "./Pages/Home";
-import OrderPage from "./Pages/ItemPage";
+import Item from "./Pages/ItemPage";
 import Label from "./Pages/LabelPage";
 import Contact from "./Pages/Contact";
 import AboutUs from "./Pages/AboutUs";
@@ -28,8 +28,8 @@ export const routes = [
     element: <SignUp/>,
   },
   {
-    path: "/orderpage",
-    element: <OrderPage/>,
+    path: "/itempage",
+    element: <Item/>,
   },
   {
     path: "/label",

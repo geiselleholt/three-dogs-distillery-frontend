@@ -29,11 +29,12 @@ const NewItemForm = ({ addItemCallback }) => {
   return (
     <form onSubmit={submitItemData}>
         <div className="order">
-        <section className="spirit">
-          <p className="titles">Choose Your Spirit</p>
+        <div className="spirit">
+        <label className="titles" htmlFor="name">Choose Your Spirit</label>
           <p className="optional">*$100 per bottle- add $50 for Bourbon</p>
-          <section className="pictures">
+          <div className="pictures">
             <button
+              type="button"
               name="spirit"
               id="spirit"
               value="Brandy"
@@ -42,6 +43,7 @@ const NewItemForm = ({ addItemCallback }) => {
               Brandy- made from all natural fruits, quality sugar, fermented for 2 weeks
             </button>
             <button
+              type="button"
               name="spirit"
               id="spirit"
               value="Bourbon"
@@ -49,7 +51,8 @@ const NewItemForm = ({ addItemCallback }) => {
               className="each__spirit">
               Bourbon- made from barley and rye, fermented for 30 days, Aged with chips for 60 days
             </button>
-            <button 
+            <button
+              type="button"
               name="spirit"
               id="spirit"
               value="Whiskey"
@@ -57,7 +60,8 @@ const NewItemForm = ({ addItemCallback }) => {
               className="each__spirit">
               Whiskey- made with barley, grains. Fermented for 30 days. Aged with chips for 30 days 
             </button>
-            <button             
+            <button           
+              type="button"  
               name="spirit"
               id="spirit"
               value="Moonshine"
@@ -65,7 +69,8 @@ const NewItemForm = ({ addItemCallback }) => {
               className="each__spirit">
               Moonshine- made with Corn, barley and yeast. Double distilled for smooth taste and quality
             </button>
-            <button             
+            <button          
+              type="button"   
               name="spirit"
               id="spirit"
               value="Vodka"
@@ -73,13 +78,14 @@ const NewItemForm = ({ addItemCallback }) => {
               className="each__spirit">
               Vodka- Made from wheat, rye or potato. Fermented for 30 days. Double distilled
             </button>
-            </section>
-          </section>
-          <section className="spirit">
-            <p className="titles">Choose Your Flavor</p>
+            </div>
+          </div>
+          <div className="spirit">
+          <label className="titles" htmlFor="name">Choose Your Flavor</label>
             <p className="optional">*optional- add $50</p>
-            <section className="pictures">
+            <div className="pictures">
             <button
+              type="button"
               name="flavor"
               id="flavor"
               value="Cherry"
@@ -88,6 +94,7 @@ const NewItemForm = ({ addItemCallback }) => {
               Cherry
             </button>
             <button
+              type="button"
               name="flavor"
               id="flavor"
               value="Apple"
@@ -96,6 +103,7 @@ const NewItemForm = ({ addItemCallback }) => {
               Apple
             </button>
             <button 
+              type="button"
               name="flavor"
               id="flavor"
               value="Citrus"
@@ -103,7 +111,8 @@ const NewItemForm = ({ addItemCallback }) => {
               className="citrus">
               Citrus
             </button>
-            <button             
+            <button   
+              type="button"          
               name="flavor"
               id="flavor"
               value="Watermelon Candy"
@@ -111,7 +120,8 @@ const NewItemForm = ({ addItemCallback }) => {
               className="candy">
               Watermelon Candy
             </button>
-            <button             
+            <button   
+              type="button"          
               name="flavor"
               id="flavor"
               value="Espresso"
@@ -119,14 +129,15 @@ const NewItemForm = ({ addItemCallback }) => {
               className="espresso">
               Espresso
             </button>
-            </section>
-          </section>
-          <section className="spirit">
-            <p className="titles">Choose Your Bottle Type</p>
+            </div>
+          </div>
+          <div className="spirit">
+          <label className="titles" htmlFor="name">Choose Your Bottle Type</label>
             <p className="optional">*add $25 for Fancy Bottle</p>
             <p className="optional">750ml bottles- 750ml total in minis</p>
-            <section className="pictures">
+            <div className="pictures">
             <button
+              type="button"
               name="bottle"
               id="bottle"
               value="Fancy Bottle"
@@ -135,6 +146,7 @@ const NewItemForm = ({ addItemCallback }) => {
               Fancy
             </button>
             <button
+              type="button"
               name="bottle"
               id="bottle"
               value="Standard Bottle"
@@ -142,7 +154,8 @@ const NewItemForm = ({ addItemCallback }) => {
               className="standard">
               Standard
               </button>
-            <button 
+            <button
+              type="button" 
               name="bottle"
               id="bottle"
               value="Mason Jar"
@@ -150,7 +163,8 @@ const NewItemForm = ({ addItemCallback }) => {
               className="mason">
               Mason Jar
             </button>
-            <button             
+            <button
+              type="button"             
               name="bottle"
               id="bottle"
               value="Mini Bottles"
@@ -158,7 +172,8 @@ const NewItemForm = ({ addItemCallback }) => {
               className="mini">
               15 Mini Bottles
               </button>
-            <button             
+            <button
+              type="button"             
               name="bottle"
               id="bottle"
               value="Mini Mason Jars"
@@ -166,9 +181,9 @@ const NewItemForm = ({ addItemCallback }) => {
               className="mini__mason">
               15 Mini Mason Jars
               </button>
-            </section>
-          </section>
-          <section className="spirit">
+            </div>
+          </div>
+          <div className="spirit">
           <label className="titles" htmlFor="name">Choose Your Quantity</label>
             <select
               className="select"
@@ -188,8 +203,8 @@ const NewItemForm = ({ addItemCallback }) => {
               <option>9</option>
               <option>10</option>
             </select>
-          </section>
-          <section className="preview">
+          </div>
+          <div className="preview">
             <p>YOUR ORDER:</p>
             <p>
               Spirit= {itemData.spirit}
@@ -203,9 +218,18 @@ const NewItemForm = ({ addItemCallback }) => {
             <p>
               Quantity= {itemData.quantity}
             </p>
-          </section>
+          </div>
         </div>
+        <div className="button">
+      <button
+        className="label__button"
+        type="submit"
+        >
+        Add Item to Order
+      </button>
+      </div>
     </form>
+
   );
 };
 

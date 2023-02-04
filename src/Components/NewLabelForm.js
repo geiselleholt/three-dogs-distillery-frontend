@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "./NewLabelForm.css";
 
-const NewLabelForm = ({ addLabelCallback }) => {
+const NewLabelForm = ({ addLabelCallback, item }) => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
   const [labelData, setLabelData] = useState({
     name_font: "",
     name: "",
@@ -12,18 +14,23 @@ const NewLabelForm = ({ addLabelCallback }) => {
 
   const submitLabelData = (e) => {
     e.preventDefault();
-
+    
     addLabelCallback(labelData);
     setLabelData({
       name_font: "",
       name: "",
       message_font: "",
       message: "",
+      item_id: "",
     });
   };
 
   const handleChange = (e) => {
-    setLabelData({ ...labelData, [e.target.name]: e.target.value });
+    setLabelData({ ...labelData, [e.target.name]: e.target.value, item_id: item.id });
+  };
+
+  const toggleSubmitButton = () => {
+    setIsSubmitted(!isSubmitted);
   };
 
   return (
@@ -43,30 +50,35 @@ const NewLabelForm = ({ addLabelCallback }) => {
           <section>
           <p>Choose Your Bottle Name's Font</p>
             <button
+              type="button"
               name="name_font"
               id="name_font"
               value="name_arial"
               onClick={handleChange} 
               className="arial">Arial</button>
             <button
+              type="button"
               name="name_font"
               id="name_font"
               value="name_cursive"
               onClick={handleChange}
               className="cursive">Cursive</button>
             <button 
+              type="button"
               name="name_font"
               id="name_font"
               value="name_fantasy"
               onClick={handleChange}
               className="fantasy">Fantasy</button>
-            <button             
+            <button
+              type="button"             
               name="name_font"
               id="name_font"
               value="name_impact"
               onClick={handleChange}
               className="impact">Impact</button>
-            <button             
+            <button
+              type="button"             
               name="name_font"
               id="name_font"
               value="name_roman"
@@ -86,31 +98,36 @@ const NewLabelForm = ({ addLabelCallback }) => {
           />
           <section className="message_preview">
             <p>Choose Your Message's Font</p>
-            <button 
+            <button
+              type="button" 
               name="message_font"
               id="message_font"
               value="message_arial"
               onClick={handleChange}
               className="arial">Arial</button>
-            <button 
+            <button
+              type="button" 
               name="message_font"
               id="message_font"
               value="message_cursive"
               onClick={handleChange}
             className="cursive">Cursive</button>
-            <button 
+            <button
+              type="button" 
               name="message_font"
               id="message_font"
               value="message_fantasy"
               onClick={handleChange}
               className="fantasy">Fantasy</button>
-            <button 
+            <button
+              type="button" 
               name="message_font"
               id="message_font"
               value="message_impact"
               onClick={handleChange}
               className="impact">Impact</button>
-            <button               
+            <button
+              type="button"               
               name="message_font"
               id="message_font"
               value="message_roman"
@@ -129,6 +146,16 @@ const NewLabelForm = ({ addLabelCallback }) => {
           </section>
         </div>
       </section>
+      <section className="button">
+    <button
+    type="submit"
+    className="label__button"
+    onClick={toggleSubmitButton}
+    disabled={isSubmitted}
+    >
+      {!isSubmitted ? "Submit Item(s)" : "Item Submitted"}
+    </button>
+    </section>
     </form>
   );
 };

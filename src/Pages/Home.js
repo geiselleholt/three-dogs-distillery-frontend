@@ -40,7 +40,7 @@ const Home = () => {
               </a>
             </section>
             <section>
-              <a href="/orderpage">
+              <a href="/itempage">
                 <button className="buttons">Order Now</button>
               </a>
             </section>
@@ -68,7 +68,7 @@ const Home = () => {
             </p>
           </p>
         <section>
-          <a className="how_to_links" href="/orderpage">
+          <a className="how_to_links" href="/itempage">
             <button className="buttons">Order Now</button>
           </a>
           </section>
@@ -92,7 +92,7 @@ const Home = () => {
         <img alt="spinning logo" src={ three_dogs_logo } width={200} height={100}/>
         </section>
         <section>
-          <a href="/orderpage">
+          <a href="/itempage">
             <button className="buttons">Order Now</button>
           </a>
         </section>

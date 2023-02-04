@@ -2,8 +2,29 @@ import "./LabelPage.css";
 import { motion } from "framer-motion";
 import three_dogs_logo from "../images/three_dogs_logo.jpg";
 import NewLabelForm from "../Components/NewLabelForm";
+import axios from "axios";
+import { useState } from "react";
+// import { useLocation } from "react-router-dom";
+
 
 const Label = () => {
+  const [allLabelData, setAllLabelData] = useState([]);
+
+  // const location = useLocation();
+
+  // const item = location.state?.item;
+  
+
+  const addLabel = async (labelData) => {
+    const response = await axios.post(
+      `${process.env.REACT_APP_BACKEND_URL}/labels`,
+      labelData
+    );
+    const newLabels = [...allLabelData];
+    newLabels.push({ ...response.data.label });
+    setAllLabelData(newLabels);
+  };
+
   return (
     <div>
       <h1 className="label__header">
@@ -36,7 +57,10 @@ const Label = () => {
         </section>
       </h1>
         <section className="label__form">
-        <NewLabelForm/>
+        <NewLabelForm
+        addLabelCallback={addLabel}
+        // item={item}
+        />
         </section>
       <section className="button">
             <a href="/viewcart">

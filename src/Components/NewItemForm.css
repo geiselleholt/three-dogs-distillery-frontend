@@ -41,6 +41,11 @@
     box-shadow: -15px 7px 1px brown;
 }
 
+.each__spirit:focus {
+    border: 2px solid green;
+    box-shadow: -15px 7px 1px green;
+}
+
 .cherry {
     background-image: url("/src/images/cherry.jpg");
     width: 210px;
@@ -51,6 +56,11 @@
     font-size:2rem;
     border: 2px solid brown;
     box-shadow: -15px 7px 1px brown;
+}
+
+.cherry:focus {
+    border: 2px solid green;
+    box-shadow: -15px 7px 1px green;
 }
 
 .apple {
@@ -65,6 +75,11 @@
     box-shadow: -15px 7px 1px brown;
 }
 
+.apple:focus {
+    border: 2px solid green;
+    box-shadow: -15px 7px 1px green;
+}
+
 .citrus {
     background-image: url("/src/images/citrus.jpeg");
     width: 210px;
@@ -75,6 +90,11 @@
     font-weight: bold;
     border: 2px solid brown;
     box-shadow: -15px 7px 1px brown;
+}
+
+.citrus:focus {
+    border: 2px solid green;
+    box-shadow: -15px 7px 1px green;
 }
 
 .candy {
@@ -89,6 +109,11 @@
     box-shadow: -15px 7px 1px brown;
 }
 
+.candy:focus {
+    border: 2px solid green;
+    box-shadow: -15px 7px 1px green;
+}
+
 .espresso {
     background-image: url("/src/images/espresso.jpg");
     width: 210px;
@@ -101,6 +126,11 @@
     box-shadow: -15px 7px 1px brown;
 }
 
+.espresso:focus {
+    border: 2px solid green;
+    box-shadow: -15px 7px 1px green;
+}
+
 .standard {
     background-image: url("/src/images/standard.jpeg");
     width: 210px;
@@ -109,6 +139,11 @@
     font-weight: bold;
     border: 2px solid brown;
     box-shadow: -15px 7px 1px brown;
+}
+
+.standard:focus {
+    border: 2px solid green;
+    box-shadow: -15px 7px 1px green;
 }
 
 .fancy {
@@ -121,6 +156,11 @@
     box-shadow: -15px 7px 1px brown;
 }
 
+.fancy:focus {
+    border: 2px solid green;
+    box-shadow: -15px 7px 1px green;
+}
+
 .mason {
     background-image: url("/src/images/mason_jar.jpeg");
     width: 210px;
@@ -129,6 +169,11 @@
     font-weight: bold;
     border: 2px solid brown;
     box-shadow: -15px 7px 1px brown;
+}
+
+.msaon:focus {
+    border: 2px solid green;
+    box-shadow: -15px 7px 1px green;
 }
 
 .mini {
@@ -141,6 +186,11 @@
     box-shadow: -15px 7px 1px brown;
 }
 
+.mini:focus {
+    border: 2px solid green;
+    box-shadow: -15px 7px 1px green;
+}
+
 .mini__mason {
     background-image: url("/src/images/mini_mason.jpg");
     width: 210px;
@@ -149,6 +199,11 @@
     font-weight: bold;
     border: 2px solid brown;
     box-shadow: -15px 7px 1px brown;
+}
+
+.mini__mason:focus {
+    border: 2px solid green;
+    box-shadow: -15px 7px 1px green;
 }
 
 .button {
