@@ -75,7 +75,6 @@ function SignUp() {
         </a>
       </section>
     </div>
-    
   );
 }
 

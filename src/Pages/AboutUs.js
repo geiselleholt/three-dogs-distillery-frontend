@@ -54,7 +54,7 @@ const AboutUs = () => {
               </a>}
             </section>
             <section>
-              <a href="/itempage">
+              <a href="/orderpage">
                 <button className="buttons">Order Now</button>
               </a>
             </section>
