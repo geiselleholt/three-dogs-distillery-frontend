@@ -5,9 +5,22 @@ import { motion } from "framer-motion";
 import three_dogs_logo from "../images/three_dogs_logo.jpg";
 import red_table from "../images/red_table.jpg";
 import moonshiining from "../images/moonshining.jpeg";
+import { useState } from "react";
 
 
 const Home = () => {
+  const [loggedIn, setLoggedIn] = useState(true);
+
+  const toggleLoggedIn = () => {
+    setLoggedIn(!loggedIn);
+  };
+
+  const logoutUser = () => {
+    Userfront.logout();
+    toggleLoggedIn();
+  }
+
+
   return (
     <div id="outer-container" >
       {/* <Menu pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } >
@@ -29,11 +42,20 @@ const Home = () => {
           </motion.div>
           <p className="title">Welcome to Three Dog's Distillery</p>
           <section className="header__buttons">
-            <section>
-            <a href="/login">
-              <button className="buttons">Log In</button>
-            </a>
-            </section>
+            
+          <span className="hello">{Userfront.tokens.accessToken ? `Hello ${Userfront.user.name}!` : ""}</span>
+          <section>
+            {Userfront.tokens.accessToken ? 
+            <button 
+              className="buttons" 
+              onClick={logoutUser}>
+              Log Out
+            </button> 
+            : <a href="/login">
+                <button className="buttons">Log In
+                </button>
+              </a>}
+          </section>
             <section>
               <a href="/signup">
                 <button className="buttons">Sign Up</button>
@@ -48,9 +70,6 @@ const Home = () => {
               <a href="/viewcart">
                 <button className="buttons">View Cart</button>
               </a>
-            </section>
-            <section>
-              <button className="buttons" onClick={Userfront.logout}>Log Out</button>
             </section>
           </section>  
         </h1>

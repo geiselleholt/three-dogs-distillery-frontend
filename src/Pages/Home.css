@@ -19,6 +19,14 @@
     justify-content: space-evenly;
 }
 
+.hello {
+    font-size:2rem;
+    padding-left: 100pt;
+    font-family:'Courier New', Courier, monospace;
+    color: crimson;
+    -webkit-text-stroke: 1px black;
+}
+
 
 .burger__menu {
     color: crimson;

@@ -4,8 +4,6 @@ import three_dogs_logo from "../images/three_dogs_logo.jpg";
 import NewItemForm from "../Components/NewItemForm";
 import axios from "axios";
 import { useState } from "react";
-// import { Link } from "react-router-dom";
-
 
 const getAllItemsApi = async () => {
   const response = await axios.get(
@@ -14,11 +12,8 @@ const getAllItemsApi = async () => {
   return response.data;
 };
 
-
-
 const Item = () => {
   const [itemsData, setItemsData] = useState([]);
-  const [newItem, setNewItem] = useState([])
 
   const getAllItems = async () => {
     const items = await getAllItemsApi();
@@ -34,7 +29,6 @@ const Item = () => {
     const newItemData = [...itemsData];
     newItemData.push(newItem);
     setItemsData(newItemData);
-    setNewItem(newItem)
 
     return getAllItems();
   };
@@ -42,9 +36,6 @@ const Item = () => {
 
   return (
     <div>
-      {/* <Link to="/label/:id" state={{ item: newItem }} className="link">
-        Item Link
-      </Link> */}
       <h1 className="order__header">
         <motion.div
         animate={{rotate: 360}}
@@ -77,14 +68,13 @@ const Item = () => {
       <NewItemForm
         addItemCallback={addItemData}
       />
-
-      {/* <section className="button">
+      <section className="button">
             <a href="/label">
               <button className="label__button">
                 Design Your Label
               </button>
             </a>
-      </section> */}
+      </section>
       <footer className="order__footer">
         <section>
         <img alt="spinning logo" src={ three_dogs_logo } width={200} height={100}/>
