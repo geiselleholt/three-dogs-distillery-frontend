@@ -16,6 +16,7 @@ const NewLabelForm = ({ addLabelCallback, item }) => {
     e.preventDefault();
     
     addLabelCallback(labelData);
+    toggleSubmitButton();
     setLabelData({
       name_font: "",
       name: "",
@@ -149,11 +150,10 @@ const NewLabelForm = ({ addLabelCallback, item }) => {
       <section className="button">
     <button
     type="submit"
-    className="label__button"
-    onClick={toggleSubmitButton}
+    className={!isSubmitted ? "label__button" : "submitted"}
     disabled={isSubmitted}
     >
-      {!isSubmitted ? "Submit Item(s)" : "Item Submitted"}
+      {!isSubmitted ? "Add Label" : "Label Added"}
     </button>
     </section>
     </form>

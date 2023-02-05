@@ -3,6 +3,12 @@ import PropTypes from "prop-types";
 import "./NewItemForm.css";
 
 const NewItemForm = ({ addItemCallback }) => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const toggleSubmitButton = () => {
+    setIsSubmitted(!isSubmitted);
+  };
+
   const [itemData, setItemData] = useState({
     spirit: "",
     flavor: "",
@@ -14,6 +20,7 @@ const NewItemForm = ({ addItemCallback }) => {
     e.preventDefault();
 
     addItemCallback(itemData);
+    toggleSubmitButton();
     setItemData({
       spirit: "",
       flavor: "",
@@ -25,6 +32,9 @@ const NewItemForm = ({ addItemCallback }) => {
   const handleChange = (e) => {
     setItemData({ ...itemData, [e.target.name]: e.target.value });
   };
+
+
+
 
   return (
     <form onSubmit={submitItemData}>
@@ -183,7 +193,7 @@ const NewItemForm = ({ addItemCallback }) => {
               </button>
             </div>
           </div>
-          <div className="spirit">
+          <div className="quantity">
           <label className="titles" htmlFor="name">Choose Your Quantity</label>
             <select
               className="select"
@@ -221,15 +231,23 @@ const NewItemForm = ({ addItemCallback }) => {
           </div>
         </div>
         <div className="button">
-      <button
-        className="label__button"
+      {/* <button
+        className= {isLabelSubmitted ? "label__button" : "submitted"}
         type="submit"
+        onClick={toggleIsLabelSubmitted}
+        disabled={isLabelSubmitted}
         >
-        Add Item to Order
-      </button>
+        {isLabelSubmitted ? "Bottle(s) added to Order" : "Add Bottle(s) to Order"}
+      </button> */}
+      <button
+    type="submit"
+    className={!isSubmitted ? "label__button" : "submitted"}
+    disabled={isSubmitted}
+    >
+      {!isSubmitted ? "Add Bottle(s)" : "Bottle(s) Added"}
+    </button>
       </div>
     </form>
-
   );
 };
 

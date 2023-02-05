@@ -57,9 +57,10 @@ const Home = () => {
               </a>}
           </section>
             <section>
+              {!Userfront.tokens.accessToken &&
               <a href="/signup">
                 <button className="buttons">Sign Up</button>
-              </a>
+              </a>}
             </section>
             <section>
               <a href="/itempage">
@@ -74,37 +75,40 @@ const Home = () => {
           </section>  
         </h1>
         <section className="processes">
-          <img alt="bottle" src={red_table}></img>
-          <p>
+          <img className= "picture" alt="bottle" src={red_table}></img>
+          <section className="intro">
+          <p >
             Three Dog's Distillery lets you design your own custom made spirits!
           </p>
           <p>
             Choose from 5 different spirits and 5 optional flavor infusions. Then choose what kind
             of bottle you'd like and desgin you own custom made label with an optional message!
+          </p>
           <p>
             You can make 100 mini bottles of your favorite flavor of vodka for your wedding with a message for your guests.
-            Or you can make an aged bottle of Cherry Bourbon in a fancy botlle for your Dad's birthday. The possibilites are endless!
+            Or you can make an aged bottle of Cherry Bourbon in a fancy botlle for your Dad's birthday. 
             </p>
-          </p>
-        <section>
-          <a className="how_to_links" href="/itempage">
-            <button className="buttons">Order Now</button>
-          </a>
-          </section>
-          <section>
-          <a className="how_to_links" href="/contact">
-            <button className="buttons">Contact Nick</button>
-          </a>
+            <p>
+            The possibilites are endless!
+            </p>
           </section>
         </section>  
       <section className="how__to">
-      <img alt="mason jar" src={moonshiining}></img>
-        <p>
+      <img className= "picture" alt="mason jar" src={moonshiining}></img>
+      <section className="intro">
+        <p >
            Nick is a true artisan and artist. He's been crafting his own spirits for over 20 years and he's finally
-          fullfilling his dream of sharing his premium products with the world. He handcrafts every bottle himself using his 
-          tried and true methods. He's uses state of the art distilling equipment. He's dedicated to using only quality 
-          ingredients. He ferments and ages to perfection to get a smooth even taste. Order your bottle today!
+          fullfilling his dream of sharing his premium products with the world. 
         </p>
+        <p>
+          He handcrafts every bottle himself using his 
+          tried and true methods. He's uses state of the art distilling equipment. He's dedicated to using only quality 
+          ingredients. He ferments and ages to perfection to get a smooth even taste. 
+        </p>
+          <p>
+          Order your bottle today!
+        </p>
+        </section>
       </section>
       <footer className="home__footer">
         <section>

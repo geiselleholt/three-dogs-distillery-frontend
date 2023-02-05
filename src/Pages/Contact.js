@@ -3,8 +3,20 @@ import Userfront from "@userfront/react";
 import { motion } from "framer-motion";
 import three_dogs_logo from "../images/three_dogs_logo.jpg";
 import bottles from "../images/bottles.jpg";
+import { useState } from "react";
 
 const ContactPage = () => {
+  const [loggedIn, setLoggedIn] = useState(true);
+
+  const toggleLoggedIn = () => {
+    setLoggedIn(!loggedIn);
+  };
+
+  const logoutUser = () => {
+    Userfront.logout();
+    toggleLoggedIn();
+  }
+
   return (
     <div>
         <h1 className="home__header">
@@ -14,20 +26,30 @@ const ContactPage = () => {
           >
             <img alt="spinning logo" src={ three_dogs_logo } width={170} height={120}/>
           </motion.div>
-          <p className="title">Three Dog's Distillery- Contact Nick</p>
+          <p className="title">Welcome to Three Dog's Distillery</p>
           <section className="header__buttons">
+            
+          <span className="hello">{Userfront.tokens.accessToken ? `Hello ${Userfront.user.name}!` : ""}</span>
+          <section>
+            {Userfront.tokens.accessToken ? 
+            <button 
+              className="buttons" 
+              onClick={logoutUser}>
+              Log Out
+            </button> 
+            : <a href="/login">
+                <button className="buttons">Log In
+                </button>
+              </a>}
+          </section>
             <section>
-            <a href="/login">
-              <button className="buttons">Log In</button>
-            </a>
-            </section>
-            <section>
+              {!Userfront.tokens.accessToken &&
               <a href="/signup">
                 <button className="buttons">Sign Up</button>
-              </a>
+              </a>}
             </section>
             <section>
-              <a href="/orderpage">
+              <a href="/itempage">
                 <button className="buttons">Order Now</button>
               </a>
             </section>
@@ -37,8 +59,10 @@ const ContactPage = () => {
               </a>
             </section>
             <section>
-              <button className="buttons" onClick={Userfront.logout}>Log Out</button>
-            </section>
+          <a className="links" href="/">
+            <button className="buttons">Home</button>
+          </a>
+        </section>
           </section>  
         </h1>
       <section className="contact">
