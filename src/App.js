@@ -7,6 +7,7 @@ import Home from "./Pages/Home";
 import Order from "./Pages/OrderPage";
 import ViewCart from "./Pages/ViewCart";
 import ThankYou from "./Pages/ThankYou";
+import CancelOrder from "./Pages/CancelOrder";
 import Contact from "./Pages/Contact";
 import AboutUs from "./Pages/AboutUs";
 import ViewOrder from "./Pages/ViewOrder";
