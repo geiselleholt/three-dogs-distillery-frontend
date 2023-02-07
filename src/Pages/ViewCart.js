@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-// const handleCheckout redirect the /card  with POST
-
 const ProductDisplay = () => (
   <section>
     <div className="product">
@@ -15,12 +13,11 @@ const ProductDisplay = () => (
       </div>
     </div>
       <section>
-        <button 
-        className="buttons"
-        // onClick={ handleCheckout }
-        >
-          Checkout
-        </button>
+      <form action="http://localhost:5000/create-checkout-session" method="POST">
+      <button type="submit">
+        Checkout
+      </button>
+    </form>
       </section>
   </section>
 );

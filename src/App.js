@@ -61,7 +61,7 @@ export const routes = [
 
 function SignUp() {
   return (
-    <div>
+    <div className="error">
       <motion.div
         animate={{rotate: 360}}
         transition={{ repeat: 2, duration: 3}}
@@ -91,7 +91,7 @@ const LoginForm = Userfront.build({
 
 function Login() {
   return (
-    <div>
+    <div className="error">
       <motion.div
         animate={{rotate: 360}}
         transition={{ repeat: 2, duration: 3}}

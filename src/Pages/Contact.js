@@ -67,6 +67,7 @@ const ContactPage = () => {
         </h1>
       <section className="contact">
         <img alt="bottles" src={bottles}></img>
+        <section className="intro">
         <p>
           Call Nick at (720)-467-0390
         </p>
@@ -74,12 +75,13 @@ const ContactPage = () => {
           Email Nick at 3DogsDistilling@gmail.com
         </p>
         <p>
-          Click {           <a href="/vieworder">
+          Click { <a href="/vieworder">
             <button className="buttons">View Order</button>
           </a> } to review your order or to see your order's updated status or 
           delvery date (must be logged in to view order)
         </p>
         <p> Nick is here for you 24-7 to answer questions about your current order or future orders</p>
+      </section>
       </section>
       <footer className="home__footer">
         <section>
