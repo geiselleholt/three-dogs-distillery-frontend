@@ -13,7 +13,7 @@ const ProductDisplay = () => (
       </div>
     </div>
       <section>
-      <form action="http://localhost:5000/create-checkout-session" method="POST">
+      <form action="https://three-dogs-distillery-backend.herokuapp.com/create-checkout-session" method="POST">
       <button type="submit">
         Checkout
       </button>
