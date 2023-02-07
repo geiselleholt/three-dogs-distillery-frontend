@@ -3,7 +3,7 @@
 const ThankYou = () => {
   return (
     <div>
-      Hello from ThankYou page
+      Thank You For Your Order
     </div>
   );
 };

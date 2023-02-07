@@ -5,12 +5,14 @@ import three_dogs_logo from "./images/three_dogs_logo.jpg";
 import "./App.css";
 import Home from "./Pages/Home";
 import Order from "./Pages/OrderPage";
+import ViewCart from "./Pages/ViewCart";
+import ThankYou from "./Pages/ThankYou";
 import Contact from "./Pages/Contact";
 import AboutUs from "./Pages/AboutUs";
 import ViewOrder from "./Pages/ViewOrder";
 import Admin from "./Pages/Admin";
 import Error from "./Pages/Error";
-import ViewCart from "./Pages/ViewCart";
+
 
 
 export const routes = [
@@ -33,6 +35,18 @@ export const routes = [
   {
     path: "/viewcart",
     element: <ViewCart/>
+  },
+  {
+    path: "/thankyou",
+    element: <ThankYou/>,
+  },
+  {
+    path: "/cancelOrder",
+    element: <CancelOrder/>,
+  },
+  {
+    path: "/contact",
+    element: <Contact/>,
   },
   {
     path: "/contact",
