@@ -115,7 +115,7 @@ transition={{ repeat: 2, duration: 3}}
         />
         </section>
       <section className="button">
-        <form action="http://localhost:5000/create-checkout-session" method="POST">
+        <form action="https://three-dogs-distillery-backend.herokuapp.com/create-checkout-session" method="POST">
           <input type="hidden" name="itemId" value={newItem.id}/>
           <button className="label__button" type="submit">
             Checkout
