@@ -225,9 +225,9 @@ const NewItemForm = ({ addItemCallback }) => {
             <p>
               Bottle= {itemData.bottle}
             </p>
-            <p>
+            {/* <p>
               Quantity= {itemData.quantity}
-            </p>
+            </p> */}
           </div>
         </div>
         <div className="button">

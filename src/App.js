@@ -5,7 +5,6 @@ import three_dogs_logo from "./images/three_dogs_logo.jpg";
 import "./App.css";
 import Home from "./Pages/Home";
 import Order from "./Pages/OrderPage";
-import ViewCart from "./Pages/ViewCart";
 import ThankYou from "./Pages/ThankYou";
 import CancelOrder from "./Pages/CancelOrder";
 import Contact from "./Pages/Contact";
@@ -32,10 +31,6 @@ export const routes = [
   {
     path: "/orderpage",
     element: <Order/>,
-  },
-  {
-    path: "/viewcart",
-    element: <ViewCart/>
   },
   {
     path: "/thankyou",

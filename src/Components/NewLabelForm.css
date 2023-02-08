@@ -24,8 +24,10 @@
     border-color: black;
     text-align: center;
     color: black;
-    width: 300pt;
+    width: 600pt;
     height: 200pt;
+    border: 2px solid green;
+    box-shadow: -15px 7px 1px green;
 }
 
 .submit__button {

@@ -17,7 +17,7 @@ Item.propTypes = {
   bottle_type: PropTypes.string.isRequired,
   bottle_quantity: PropTypes.number.isRequired,
   age_time: PropTypes.string.isRequired,
-  order_id: PropTypes.number.isRequired,
+  // order_id: PropTypes.number.isRequired,
 };
 
 export default Item;

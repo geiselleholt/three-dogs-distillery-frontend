@@ -6,6 +6,7 @@ import axios from "axios";
 import { useState } from "react";
 import Userfront from "@userfront/react";
 import NewLabelForm from "../Components/NewLabelForm";
+// import ViewCart from "./ViewCart";
 
 
 const getAllItemsApi = async () => {
@@ -21,6 +22,7 @@ const Order = () => {
   const [newItem, setNewItem] = useState({})
   const [allLabelData, setAllLabelData] = useState([]);
 
+
   const getAllItems = async () => {
     const items = await getAllItemsApi();
     setItemsData(items);
@@ -34,7 +36,6 @@ const Order = () => {
     Userfront.logout();
     toggleLoggedIn();
   }        
-
 
   const addItemData = async (itemForm) => {
     const response = await axios.post(
@@ -104,7 +105,6 @@ transition={{ repeat: 2, duration: 3}}
 </section>
 </section>  
 </h1>
-
       <NewItemForm
         addItemCallback={addItemData}
       />
@@ -115,11 +115,12 @@ transition={{ repeat: 2, duration: 3}}
         />
         </section>
       <section className="button">
-            <a href="/viewcart">
-              <button className="label__button">
-                Add to Cart
-              </button>
-            </a>
+        <form action="http://localhost:5000/create-checkout-session" method="POST">
+          <input type="hidden" name="itemId" value={newItem.id}/>
+          <button className="label__button" type="submit">
+            Checkout
+          </button>
+        </form>
       </section>
       <footer className="order__footer">
         <section>
