@@ -225,20 +225,12 @@ const NewItemForm = ({ addItemCallback }) => {
             <p>
               Bottle= {itemData.bottle}
             </p>
-            {/* <p>
+            <p>
               Quantity= {itemData.quantity}
-            </p> */}
+            </p>
           </div>
         </div>
         <div className="button">
-      {/* <button
-        className= {isLabelSubmitted ? "label__button" : "submitted"}
-        type="submit"
-        onClick={toggleIsLabelSubmitted}
-        disabled={isLabelSubmitted}
-        >
-        {isLabelSubmitted ? "Bottle(s) added to Order" : "Add Bottle(s) to Order"}
-      </button> */}
       <button
     type="submit"
     className={!isSubmitted ? "label__button" : "submitted"}
