@@ -1,4 +1,4 @@
-
+import "./CancelOrder.css";
 import { motion } from "framer-motion";
 import three_dogs_logo from "../images/three_dogs_logo.jpg";
 
@@ -14,11 +14,6 @@ const CancelOrder = () => {
           </motion.div>
           <p className="title">Three Dog's Distillery</p>
           <section className="header__buttons">
-          <section>
-          <a href="/orderpage">
-            <button className="buttons">Order Now</button>
-          </a>
-        </section>
         <section>
           <a href="/">
             <button className="buttons">Home</button>
@@ -26,7 +21,9 @@ const CancelOrder = () => {
         </section>
           </section>  
         </h1>
+        <p className="message">
       Your Order has been Canceled
+      </p>
       <footer className="home__footer">
         <section>
         <img alt="spinning logo" src={ three_dogs_logo } width={200} height={100}/>

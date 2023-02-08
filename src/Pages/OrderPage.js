@@ -93,11 +93,6 @@ transition={{ repeat: 2, duration: 3}}
     </a>}
   </section>
   <section>
-    <a href="/itempage">
-      <button className="buttons">Order Now</button>
-    </a>
-  </section>
-  <section>
     <a href="/viewcart">
       <button className="buttons">View Cart</button>
     </a>
