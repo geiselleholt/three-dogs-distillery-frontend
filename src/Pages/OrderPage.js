@@ -6,7 +6,6 @@ import axios from "axios";
 import { useState } from "react";
 import Userfront from "@userfront/react";
 import NewLabelForm from "../Components/NewLabelForm";
-// import ViewCart from "./ViewCart";
 
 
 const getAllItemsApi = async () => {
@@ -52,14 +51,12 @@ const Order = () => {
     const newItemsData = [...itemsData];
     newItemsData.push(newNewItem);
     setItemsData(newItemsData);
-    console.log(newNewItem)
     setNewItem(newNewItem)
 
     return getAllItems();
   };
 
   const addLabel = async (labelData) => {
-    console.log(labelData)
     const response = await axios.post(
       `${process.env.REACT_APP_BACKEND_URL}/labels`,
       labelData

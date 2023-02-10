@@ -30,7 +30,7 @@ const ThankYou = () => {
         </section>
         <section>
           <a href="/orderpage">
-            <button className="buttons">Order Now</button>
+            <button className="buttons">Make Another Order</button>
           </a>
         </section>
         <section>

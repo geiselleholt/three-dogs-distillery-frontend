@@ -10,6 +10,7 @@ const NewLabelForm = ({ addLabelCallback, item }) => {
     name: "",
     message_font: "",
     message: "",
+    image: "",
   });
   const [image, setImage] = useState("")
 
@@ -23,7 +24,7 @@ const NewLabelForm = ({ addLabelCallback, item }) => {
       name: "",
       message_font: "",
       message: "",
-
+      image: "",
     });
   };
 
@@ -45,13 +46,13 @@ const NewLabelForm = ({ addLabelCallback, item }) => {
     })
 
     const file = await response.json()
-
     setImage(file.secure_url)
-    
+    const image = file.secure_url
+    setLabelData({ ...labelData, [e.target.name]: e.target.value, item_id: item.id, image: image });
   }
 
   const handleChange = (e) => {
-    setLabelData({ ...labelData, [e.target.name]: e.target.value, item_id: item.id, image: image });
+    setLabelData({ ...labelData, [e.target.name]: e.target.value });
   };
 
 
