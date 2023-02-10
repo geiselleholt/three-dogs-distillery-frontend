@@ -98,11 +98,11 @@ transition={{ repeat: 2, duration: 3}}
       <button className="buttons">Sign Up</button>
     </a>}
   </section>
-  <section>
+  {/* <section>
     <a href="/viewcart">
       <button className="buttons">View Cart</button>
     </a>
-  </section>
+  </section> */}
   <section>
 <a className="links" href="/">
   <button className="buttons">Home</button>
