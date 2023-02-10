@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "./NewLabelForm.css";
+// import axios from "axios";
 
 const NewLabelForm = ({ addLabelCallback, item }) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
-
   const [labelData, setLabelData] = useState({
     name_font: "",
     name: "",
     message_font: "",
     message: "",
+    image: "",
   });
+  const [loading, setLoading] = useState(false)
+  const [image, setImage] = useState("")
 
   const submitLabelData = (e) => {
     e.preventDefault();
@@ -23,16 +26,40 @@ const NewLabelForm = ({ addLabelCallback, item }) => {
       message_font: "",
       message: "",
       item_id: "",
+      image: "",
     });
   };
 
-  const handleChange = (e) => {
-    setLabelData({ ...labelData, [e.target.name]: e.target.value, item_id: item.id });
-  };
 
   const toggleSubmitButton = () => {
     setIsSubmitted(!isSubmitted);
   };
+
+  const uploadImage = async e => {
+    const files = e.target.files
+    const data = new FormData()
+    data.append('file', files[0])
+    data.append('upload_preset', 'three_dogs_images')
+    setLoading(true)
+
+    const response = await fetch('https://api.cloudinary.com/v1_1/dsaawpdte/image/upload',
+    {
+      method: 'POST',
+      body: data
+    })
+
+    const file = await response.json()
+
+
+    setImage(file.secure_url)
+    setLoading(false)
+    
+  }
+
+  const handleChange = (e) => {
+    setLabelData({ ...labelData, [e.target.name]: e.target.value, item_id: item.id, image: {image} });
+  };
+
 
   return (
     <form onSubmit={submitLabelData}>
@@ -75,9 +102,9 @@ const NewLabelForm = ({ addLabelCallback, item }) => {
               type="button"             
               name="name_font"
               id="name_font"
-              value="name_impact"
+              value="name_courier"
               onClick={handleChange}
-              className="impact">Impact</button>
+              className="courier">Courier</button>
             <button
               type="button"             
               name="name_font"
@@ -124,9 +151,9 @@ const NewLabelForm = ({ addLabelCallback, item }) => {
               type="button" 
               name="message_font"
               id="message_font"
-              value="message_impact"
+              value="message_courier"
               onClick={handleChange}
-              className="impact">Impact</button>
+              className="courier">Courier</button>
             <button
               type="button"               
               name="message_font"
@@ -137,9 +164,21 @@ const NewLabelForm = ({ addLabelCallback, item }) => {
           </section>
           </section>
           <section className="new__label__fields">
+            <p> Choose Your Image </p>
+            <p className="optional">*optional- will be black and white on label</p>
+            <input className="arial" type="file" placeholder="Upload an Image"
+            onChange={uploadImage}/>
+          </section>
+          <section className="new__label__fields">
           <p>Preview:</p>
           <section className="preview__section">
           <p className={labelData.name_font}>{labelData.name}</p>
+          { loading ? (
+            <p> Loading....</p>
+          ):(
+            <img alt= '' src={image} className='image'/>
+          )
+          }
           <p className={labelData.message_font}>{labelData.message}</p>
           </section>
           </section>

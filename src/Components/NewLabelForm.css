@@ -24,8 +24,8 @@
     border-color: black;
     text-align: center;
     color: black;
-    width: 600pt;
-    height: 200pt;
+    width: 550pt;
+    /* height: 300pt; */
     border: 2px solid green;
     box-shadow: -15px 7px 1px green;
 }
@@ -68,18 +68,18 @@
     font-size: large;
 }
 
-.name_impact {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+.name_courier {
+    font-family:'Courier New', Courier, monospace;
     font-size: 30pt;
 }
 
-.message_impact {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+.message_courier {
+    font-family:'Courier New', Courier, monospace;
     font-size: 15pt;
 }
 
-.impact {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+.courier {
+    font-family:'Courier New', Courier, monospace;
     font-size: large;
 }
 
@@ -118,4 +118,10 @@
     text-align: center;
 }
 
+.image {
+    height: 125px;
+}
 
+.label__field {
+    display: flex;
+}
