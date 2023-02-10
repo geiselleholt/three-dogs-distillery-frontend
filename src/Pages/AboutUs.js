@@ -58,11 +58,11 @@ const AboutUs = () => {
                 <button className="buttons">Order Now</button>
               </a>
             </section>
-            <section>
+            {/* <section>
               <a href="/viewcart">
                 <button className="buttons">View Cart</button>
               </a>
-            </section>
+            </section> */}
             <section>
           <a className="links" href="/">
             <button className="buttons">Home</button>
@@ -138,11 +138,11 @@ const AboutUs = () => {
             <button className="buttons">Contact Nick</button>
           </a>
         </section>
-        <section>
+        {/* <section>
           <a href="/vieworder">
             <button className="buttons">View Order</button>
           </a>
-        </section>
+        </section> */}
         {/* <section>Follow Us Logos</section> */}
       </footer>
       {/* </main> */}

@@ -67,11 +67,11 @@ const Home = () => {
                 <button className="buttons">Order Now</button>
               </a>
             </section>
-            <section>
+            {/* <section>
               <a href="/viewcart">
                 <button className="buttons">View Cart</button>
               </a>
-            </section>
+            </section> */}
           </section>  
         </h1>
         <section className="processes">
@@ -129,11 +129,11 @@ const Home = () => {
             <button className="buttons">About Us</button>
           </a>
         </section>
-        <section>
+        {/* <section>
           <a href="/vieworder">
             <button className="buttons">View Order</button>
           </a>
-        </section>
+        </section> */}
         {/* <section>Follow Us Logos</section> */}
       </footer>
       {/* </main> */}

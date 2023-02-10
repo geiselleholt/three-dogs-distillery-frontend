@@ -53,11 +53,11 @@ const ContactPage = () => {
                 <button className="buttons">Order Now</button>
               </a>
             </section>
-            <section>
+            {/* <section>
               <a href="/viewcart">
                 <button className="buttons">View Cart</button>
               </a>
-            </section>
+            </section> */}
             <section>
           <a className="links" href="/">
             <button className="buttons">Home</button>
@@ -74,12 +74,12 @@ const ContactPage = () => {
         <p>
           Email Nick at 3DogsDistilling@gmail.com
         </p>
-        <p>
+        {/* <p>
           Click { <a href="/vieworder">
             <button className="buttons">View Order</button>
           </a> } to review your order or to see your order's updated status or 
           delvery date (must be logged in to view order)
-        </p>
+        </p> */}
         <p> Nick is here for you 24-7 to answer questions about your current order or future orders</p>
       </section>
       </section>
@@ -102,11 +102,11 @@ const ContactPage = () => {
             <button className="buttons">About Us</button>
           </a>
         </section>
-        <section>
+        {/* <section>
           <a href="/vieworder">
             <button className="buttons">View Order</button>
           </a>
-        </section>
+        </section> */}
         {/* <section>Follow Us Logos</section> */}
       </footer>
       {/* </main> */}
