@@ -8,16 +8,11 @@ import Userfront from "@userfront/react";
 import NewLabelForm from "../Components/NewLabelForm";
 
 
-const getAllItemsApi = async () => {
-  const response = await axios.get(
-    `${process.env.REACT_APP_BACKEND_URL}/items`
-  );
-  return response.data;
-};
+
 
 const Order = () => {
   const [loggedIn, setLoggedIn] = useState(true);
-  const [itemsData, setItemsData] = useState([]);
+  // const [itemsData, setItemsData] = useState([]);
   const [allLabelData, setAllLabelData] = useState([]);
   const [newItem, setNewItem] = useState({
     spirit: "",
@@ -26,12 +21,6 @@ const Order = () => {
     quantity: "",
     id: "",
   })
-
-
-  const getAllItems = async () => {
-    const items = await getAllItemsApi();
-    setItemsData(items);
-  };
 
   const toggleLoggedIn = () => {
     setLoggedIn(!loggedIn);
@@ -48,12 +37,12 @@ const Order = () => {
       itemFormData
     );
     const newNewItem = (response.data.item)
-    const newItemsData = [...itemsData];
-    newItemsData.push(newNewItem);
-    setItemsData(newItemsData);
+    // const newItemsData = [...itemsData];
+    // newItemsData.push(newNewItem);
+    // setItemsData(newItemsData);
     setNewItem(newNewItem)
 
-    return getAllItems();
+    // return getAllItems();
   };
 
   const addLabel = async (labelData) => {

@@ -4,7 +4,10 @@ import PropTypes from "prop-types";
 import "./ItemList.css";
 
 
+
 const ItemList = (props) => {
+
+
   return (
     <ul>
       {props.itemsData.map((item) => (
@@ -14,7 +17,7 @@ const ItemList = (props) => {
           spirit={item.spirit}
           flavor={item.flavor}
           bottle={item.bottle}
-          // quantity={item.quantity}     
+          quantity={item.quantity}     
         />
       ))}
     </ul>
@@ -26,9 +29,9 @@ ItemList.propTypes = {
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       spirit: PropTypes.string.isRequired,
-      lavor: PropTypes.string.isRequired,
+      flavor: PropTypes.string.isRequired,
       bottle: PropTypes.string.isRequired,
-      // quantity: PropTypes.number.isRequired,
+      quantity: PropTypes.number.isRequired,
     })
   ),
 };

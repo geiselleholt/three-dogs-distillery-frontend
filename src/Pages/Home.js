@@ -56,6 +56,14 @@ const Home = () => {
                 </button>
               </a>}
           </section>
+
+          <section>
+              {Userfront.user.email === "admin@example.com" &&
+              <a href="/admin">
+                <button className="buttons">Admin</button>
+              </a>}
+            </section>
+
             <section>
               {!Userfront.tokens.accessToken &&
               <a href="/signup">

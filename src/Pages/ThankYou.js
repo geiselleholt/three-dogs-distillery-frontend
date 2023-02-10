@@ -21,9 +21,23 @@ const ThankYou = () => {
         </section>
           </section>  
         </h1>
-        <p className="message">
-      Thank You for Your Order!! Your reciept and order confirmation will be sent to your email. Enjoy your custom made Spirit! Drink responsibly 🥃
+        <section className="message">
+        <p >
+      THANK YOU FOR YOUR ORDER!!
       </p>
+      <p >
+      Your reciept and order confirmation will be sent to your email
+      </p>
+      <p >
+      Contact Nick below with any questions
+      </p>
+      <p >
+      Enjoy your custom made Spirit 🥃
+      </p>
+      <p>
+      Drink responsibly 
+      </p>
+      </section>
       <footer className="home__footer">
         <section>
         <img alt="spinning logo" src={ three_dogs_logo } width={200} height={100}/>

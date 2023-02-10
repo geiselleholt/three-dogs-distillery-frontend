@@ -1,0 +1,11 @@
+.title {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 40pt;
+    font-weight: bolder;
+    color: black;
+}
+
+/* div {
+    display: grid;
+    grid-row: 1fr 2fr 2fr 1fr;
+} */

@@ -4,20 +4,22 @@ import "./Item.css";
 
 const Item = (props) => {
   return (
-    <li>
-      Hello
-    </li>
+    <section className='order__section'>
+      <p>Order Id: {props.id}</p>
+      <p>Spirit: {props.spirit}</p>
+      <p>Flavor: {props.flavor}</p>
+      <p>Bottle: {props.bottle}</p>
+      <p>Quantity: {props.quantity}</p>
+    </section>
   );
 };
 
 Item.propTypes = {
   id: PropTypes.number.isRequired,
-  spirit_type: PropTypes.string.isRequired,
-  spirit_flavor: PropTypes.string.isRequired,
-  bottle_type: PropTypes.string.isRequired,
-  bottle_quantity: PropTypes.number.isRequired,
-  age_time: PropTypes.string.isRequired,
-  // order_id: PropTypes.number.isRequired,
+  spirit: PropTypes.string.isRequired,
+  flavor: PropTypes.string.isRequired,
+  bottle: PropTypes.string.isRequired,
+  quantity: PropTypes.number.isRequired,
 };
 
 export default Item;
