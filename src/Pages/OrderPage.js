@@ -19,8 +19,14 @@ const getAllItemsApi = async () => {
 const Order = () => {
   const [loggedIn, setLoggedIn] = useState(true);
   const [itemsData, setItemsData] = useState([]);
-  const [newItem, setNewItem] = useState({})
   const [allLabelData, setAllLabelData] = useState([]);
+  const [newItem, setNewItem] = useState({
+    spirit: "",
+    flavor: "",
+    bottle: "",
+    quantity: "",
+    id: "",
+  })
 
 
   const getAllItems = async () => {
@@ -37,21 +43,23 @@ const Order = () => {
     toggleLoggedIn();
   }        
 
-  const addItemData = async (itemForm) => {
+  const addItemData = async (itemFormData) => {
     const response = await axios.post(
       `${process.env.REACT_APP_BACKEND_URL}/items`,
-      itemForm
+      itemFormData
     );
-    const newItem = (response.data.item)
-    const newItemData = [...itemsData];
-    newItemData.push(newItem);
-    setItemsData(newItemData);
-    setNewItem(newItem)
+    const newNewItem = (response.data.item)
+    const newItemsData = [...itemsData];
+    newItemsData.push(newNewItem);
+    setItemsData(newItemsData);
+    console.log(newNewItem)
+    setNewItem(newNewItem)
 
     return getAllItems();
   };
 
   const addLabel = async (labelData) => {
+    console.log(labelData)
     const response = await axios.post(
       `${process.env.REACT_APP_BACKEND_URL}/labels`,
       labelData
@@ -115,7 +123,7 @@ transition={{ repeat: 2, duration: 3}}
         />
         </section>
       <section className="button">
-        <form action="https://three-dogs-backend.herokuapp.com/create-checkout-session" method="POST">
+        <form action="http://localhost:5000/create-checkout-session" method="POST">
           <input type="hidden" name="itemId" value={newItem.id}/>
           <button className="label__button" type="submit">
             Checkout

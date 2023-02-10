@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "./NewLabelForm.css";
-// import axios from "axios";
+
 
 const NewLabelForm = ({ addLabelCallback, item }) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -10,9 +10,7 @@ const NewLabelForm = ({ addLabelCallback, item }) => {
     name: "",
     message_font: "",
     message: "",
-    image: "",
   });
-  const [loading, setLoading] = useState(false)
   const [image, setImage] = useState("")
 
   const submitLabelData = (e) => {
@@ -25,8 +23,7 @@ const NewLabelForm = ({ addLabelCallback, item }) => {
       name: "",
       message_font: "",
       message: "",
-      item_id: "",
-      image: "",
+
     });
   };
 
@@ -40,7 +37,6 @@ const NewLabelForm = ({ addLabelCallback, item }) => {
     const data = new FormData()
     data.append('file', files[0])
     data.append('upload_preset', 'three_dogs_images')
-    setLoading(true)
 
     const response = await fetch('https://api.cloudinary.com/v1_1/dsaawpdte/image/upload',
     {
@@ -50,14 +46,12 @@ const NewLabelForm = ({ addLabelCallback, item }) => {
 
     const file = await response.json()
 
-
     setImage(file.secure_url)
-    setLoading(false)
     
   }
 
   const handleChange = (e) => {
-    setLabelData({ ...labelData, [e.target.name]: e.target.value, item_id: item.id, image: {image} });
+    setLabelData({ ...labelData, [e.target.name]: e.target.value, item_id: item.id, image: image });
   };
 
 
@@ -172,14 +166,9 @@ const NewLabelForm = ({ addLabelCallback, item }) => {
           <section className="new__label__fields">
           <p>Preview:</p>
           <section className="preview__section">
-          <p className={labelData.name_font}>{labelData.name}</p>
-          { loading ? (
-            <p> Loading....</p>
-          ):(
+            <p className={labelData.name_font}>{labelData.name}</p>
             <img alt= '' src={image} className='image'/>
-          )
-          }
-          <p className={labelData.message_font}>{labelData.message}</p>
+            <p className={labelData.message_font}>{labelData.message}</p>
           </section>
           </section>
           <section className="button__section">
