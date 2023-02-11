@@ -17,7 +17,8 @@ const ItemList = (props) => {
           spirit={item.spirit}
           flavor={item.flavor}
           bottle={item.bottle}
-          quantity={item.quantity}     
+          quantity={item.quantity}
+          email={item.email}          
         />
       ))}
     </ul>
@@ -32,6 +33,7 @@ ItemList.propTypes = {
       flavor: PropTypes.string.isRequired,
       bottle: PropTypes.string.isRequired,
       quantity: PropTypes.number.isRequired,
+      email: PropTypes.string.isRequired,
     })
   ),
 };

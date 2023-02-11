@@ -8,7 +8,6 @@ import Userfront from "@userfront/react";
 import NewLabelForm from "../Components/NewLabelForm";
 
 
-console.log(Userfront.user.email)
 
 const Order = () => {
   const [loggedIn, setLoggedIn] = useState(true);
@@ -40,10 +39,12 @@ const Order = () => {
   };
 
   const addLabel = async (labelData) => {
+    const newLabelData = {...labelData, email: Userfront.user.email}
     const response = await axios.post(
       `${process.env.REACT_APP_BACKEND_URL}/labels`,
-      labelData
+      newLabelData
     );
+    console.log(Userfront.user.email)
     const newLabels = [...allLabelData];
     newLabels.push({ ...response.data.label });
     setAllLabelData(newLabels);
