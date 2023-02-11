@@ -58,7 +58,7 @@ const Home = () => {
           </section>
 
           <section>
-              {Userfront.user.email === "admin@example.com" &&
+              {Userfront.user.email === "guamgirl1213@gmail.com" &&
               <a href="/admin">
                 <button className="buttons">Admin</button>
               </a>}
