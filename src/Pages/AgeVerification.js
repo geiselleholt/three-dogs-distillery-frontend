@@ -17,7 +17,7 @@ const AgeVerification = () => {
       </h1>
     <div className="age">
       <section> Are you over 21 years old?
-        <p className="honest">Be honest. We will find out and we will contact your parents. You don't want that smoke 🚫🤥</p>
+        <p className="honest">Be honest. We will find out and we will contact your parents. You don't want that 🚫🤥</p>
         <a href="/home">
           <button className="age_buttons">
             Yes

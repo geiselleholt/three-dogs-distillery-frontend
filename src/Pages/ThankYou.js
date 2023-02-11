@@ -1,11 +1,14 @@
 import "./CancelOrder.css";
 import { motion } from "framer-motion";
 import three_dogs_logo from "../images/three_dogs_logo.jpg";
+import ConfettiExplosion from 'react-confetti-explosion';
 
 const ThankYou = () => {
+  
   return (
     <div>
-              <h1 className="home__header">
+      <h1 className="home__header">
+      <ConfettiExplosion/>
           <motion.div
           animate={{rotate: 360}}
           transition={{ repeat: 2, duration: 3}}
@@ -15,6 +18,7 @@ const ThankYou = () => {
           <p className="title">Three Dog's Distillery- Thank You!</p>
           <section className="header__buttons">
         <section>
+        <ConfettiExplosion/>
           <a href="/home">
             <button className="buttons">Home</button>
           </a>
@@ -27,7 +31,8 @@ const ThankYou = () => {
       </p>
       <p >
       Your reciept and order confirmation will be sent to your email
-      </p>
+      </p>  
+      <ConfettiExplosion/>
       <p >
       Contact Nick below with any questions
       </p>
@@ -38,6 +43,7 @@ const ThankYou = () => {
       Drink responsibly 
       </p>
       </section>
+      <ConfettiExplosion/>
       <footer className="home__footer">
         <section>
         <img alt="spinning logo" src={ three_dogs_logo } width={200} height={100}/>
@@ -57,6 +63,7 @@ const ThankYou = () => {
             <button className="buttons">About Us</button>
           </a>
         </section>
+        <ConfettiExplosion/>
         </footer>
     </div>
   );

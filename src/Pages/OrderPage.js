@@ -107,7 +107,7 @@ const Order = () => {
         />
         </section>
       <section className="button">
-        <form action="https://three-dogs-backend.herokuapp.com/create-checkout-session" method="POST">
+        <form action="http://localhost:5000/create-checkout-session" method="POST">
           <input type="hidden" name="itemId" value={newItem.id}/>
           <button className="label__button" type="submit">
             Checkout
