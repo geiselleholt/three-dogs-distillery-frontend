@@ -1,0 +1,7 @@
+.not21 {
+    font-family:'Courier New', Courier, monospace;
+    font-size:4rem;
+    font-weight: bold;
+    padding: 20pt;
+    background:-webkit-linear-gradient(tan 50%,red 100%);
+}

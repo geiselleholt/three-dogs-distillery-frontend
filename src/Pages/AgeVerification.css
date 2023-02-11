@@ -1,0 +1,16 @@
+.age {
+    font-family:'Courier New', Courier, monospace;
+    font-size:3rem;
+    font-weight: bold;
+    padding: 20pt;
+    background:-webkit-linear-gradient(tan 50%,red 100%);
+}
+
+.age_buttons {
+    font-weight: bold;
+    font-size:3rem;
+}
+
+.age_buttons:hover {
+    background-color: tan;
+}

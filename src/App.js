@@ -3,6 +3,8 @@ import Userfront from "@userfront/react";
 import { motion } from "framer-motion";
 import three_dogs_logo from "./images/three_dogs_logo.jpg";
 import "./App.css";
+import AgeVerification from "./Pages/AgeVerification";
+import Not21 from "./Pages/Not21";
 import Home from "./Pages/Home";
 import Order from "./Pages/OrderPage";
 import ThankYou from "./Pages/ThankYou";
@@ -18,6 +20,14 @@ import Error from "./Pages/Error";
 export const routes = [
   {
     path: "/",
+    element: <AgeVerification/>
+  },
+  {
+    path: "/not21",
+    element: <Not21/>
+  },
+  {
+    path: "/home",
     element: <Home/>
   },
   {
