@@ -86,7 +86,7 @@ const Order = () => {
           </a>
         </section> */}
         <section>
-          <a className="links" href="/">
+          <a className="links" href="/home">
             <button className="buttons">Home</button>
           </a>
         </section>

@@ -59,7 +59,7 @@ const ContactPage = () => {
               </a>
             </section> */}
             <section>
-          <a className="links" href="/">
+          <a className="links" href="/home">
             <button className="buttons">Home</button>
           </a>
         </section>
@@ -89,7 +89,7 @@ const ContactPage = () => {
         <img alt="spinning logo" src={ three_dogs_logo } width={200} height={100}/>
         </section>
         <section>
-          <a className="links" href="/">
+          <a className="links" href="/home">
             <button className="buttons">Home</button>
           </a>
         </section>

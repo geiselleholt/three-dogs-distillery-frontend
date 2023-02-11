@@ -15,7 +15,7 @@ const ThankYou = () => {
           <p className="title">Three Dog's Distillery- Thank You!</p>
           <section className="header__buttons">
         <section>
-          <a href="/">
+          <a href="/home">
             <button className="buttons">Home</button>
           </a>
         </section>

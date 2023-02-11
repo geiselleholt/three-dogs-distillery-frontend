@@ -13,27 +13,27 @@ const Error = () => {
       </motion.div>
       <p> We're sorry. You have reached a page that has been disconnected or is no longer in service. If you feel you've reached this page in error, please click Home and try your page again. This is a recording. Beeeeeep </p>
       <section>
-        <a className="links" href="/">Home</a>
+        <a className="links" href="/home">Home</a>
       </section>
       <p> We're sorry. You have reached a page that has been disconnected or is no longer in service. If you feel you've reached this page in error, please click Home and try your page again. This is a recording. Beeeeeep </p>
       <section>
-        <a className="links" href="/">Home</a>
+        <a className="links" href="/home">Home</a>
       </section>
       <p> We're sorry. You have reached a page that has been disconnected or is no longer in service. If you feel you've reached this page in error, please click Home and try your page again. This is a recording. Beeeeeep </p>
       <section>
-        <a className="links" href="/">Home</a>
+        <a className="links" href="/home">Home</a>
       </section>
       <p> We're sorry. You have reached a page that has been disconnected or is no longer in service. If you feel you've reached this page in error, please click Home and try your page again. This is a recording. Beeeeeep </p> 
       <section>
-        <a className="links" href="/">Home</a>
+        <a className="links" href="/home">Home</a>
       </section>
       <p> We're sorry. You have reached a page that has been disconnected or is no longer in service. If you feel you've reached this page in error, please click Home and try your page again. This is a recording. Beeeeeep </p>
       <section>
-        <a className="links" href="/">Home</a>
+        <a className="links" href="/home">Home</a>
       </section>
       <p> We're sorry. You have reached a page that has been disconnected or is no longer in service. If you feel you've reached this page in error, please click Home and try your page again. This is a recording. Beeeeeep </p> 
       <section>
-        <a className="links" href="/">Home</a>
+        <a className="links" href="/home">Home</a>
       </section>
     </div>
   );

@@ -90,7 +90,7 @@ function SignUp() {
       </motion.div>
       <SignupForm />
       <section>
-        <a className="links" href="/">
+        <a className="links" href="/home">
           <button className="buttons">Home</button>
         </a>
       </section>
@@ -120,7 +120,7 @@ function Login() {
       </motion.div>
       <LoginForm />
       <section>
-        <a className="links" href="/">
+        <a className="links" href="/home">
           <button className="buttons">Home</button>
         </a>
       </section>
