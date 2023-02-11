@@ -8,11 +8,10 @@ import Userfront from "@userfront/react";
 import NewLabelForm from "../Components/NewLabelForm";
 
 
-
+console.log(Userfront.user.email)
 
 const Order = () => {
   const [loggedIn, setLoggedIn] = useState(true);
-  // const [itemsData, setItemsData] = useState([]);
   const [allLabelData, setAllLabelData] = useState([]);
   const [newItem, setNewItem] = useState({
     spirit: "",
@@ -37,12 +36,7 @@ const Order = () => {
       itemFormData
     );
     const newNewItem = (response.data.item)
-    // const newItemsData = [...itemsData];
-    // newItemsData.push(newNewItem);
-    // setItemsData(newItemsData);
     setNewItem(newNewItem)
-
-    // return getAllItems();
   };
 
   const addLabel = async (labelData) => {
@@ -58,51 +52,54 @@ const Order = () => {
 
   return (
     <div>
-<h1 className="home__header">
-<motion.div
-animate={{rotate: 360}}
-transition={{ repeat: 2, duration: 3}}
->
-  <img alt="spinning logo" src={ three_dogs_logo } width={170} height={120}/>
-</motion.div>
-<p className="title">Welcome to Three Dog's Distillery</p>
-<section className="header__buttons">
-  
-<span className="hello">{Userfront.tokens.accessToken ? `Hello ${Userfront.user.name}!` : ""}</span>
-<section>
-  {Userfront.tokens.accessToken ? 
-  <button 
-    className="buttons" 
-    onClick={logoutUser}>
-    Log Out
-  </button> 
-  : <a href="/login">
-      <button className="buttons">Log In
-      </button>
-    </a>}
-</section>
-  <section>
-    {!Userfront.tokens.accessToken &&
-    <a href="/signup">
-      <button className="buttons">Sign Up</button>
-    </a>}
-  </section>
-  {/* <section>
-    <a href="/viewcart">
-      <button className="buttons">View Cart</button>
-    </a>
-  </section> */}
-  <section>
-<a className="links" href="/">
-  <button className="buttons">Home</button>
-</a>
-</section>
-</section>  
-</h1>
+      <h1 className="home__header">
+        <motion.div
+          animate={{rotate: 360}}
+          transition={{ repeat: 2, duration: 3}}
+          >
+            <img alt="spinning logo" src={ three_dogs_logo } width={170} height={120}/>
+        </motion.div>
+        <p className="title">Three Dog's Distillery- Order</p>
+        <section className="header__buttons">
+        <span className="hello">{Userfront.tokens.accessToken ? `Hello ${Userfront.user.name}!` : ""}</span>
+        <section>
+          {Userfront.tokens.accessToken ? 
+          <button 
+            className="buttons" 
+            onClick={logoutUser}>
+            Log Out
+          </button> 
+          : <a href="/login">
+              <button className="buttons">Log In
+              </button>
+            </a>}
+        </section>
+        <section>
+          {!Userfront.tokens.accessToken &&
+          <a href="/signup">
+            <button className="buttons">Sign Up</button>
+          </a>}
+        </section>
+        {/* <section>
+          <a href="/viewcart">
+            <button className="buttons">View Cart</button>
+          </a>
+        </section> */}
+        <section>
+          <a className="links" href="/">
+            <button className="buttons">Home</button>
+          </a>
+        </section>
+      </section>  
+    </h1>
+    <section>
+      <p className="item_title">DESIGN YOUR BOTTLE:</p>
       <NewItemForm
         addItemCallback={addItemData}
       />
+    </section>
         <section className="label__form">
+        <p className="label_title">DESIGN YOUR LABEL:</p>
         <NewLabelForm
         addLabelCallback={addLabel}
         item={newItem}

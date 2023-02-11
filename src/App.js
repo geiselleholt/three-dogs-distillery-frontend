@@ -1,4 +1,4 @@
-import { Navigate, useLocation } from "react-router-dom";
+// import { Navigate, useLocation } from "react-router-dom";
 import Userfront from "@userfront/react";
 import { motion } from "framer-motion";
 import three_dogs_logo from "./images/three_dogs_logo.jpg";
@@ -9,7 +9,7 @@ import ThankYou from "./Pages/ThankYou";
 import CancelOrder from "./Pages/CancelOrder";
 import Contact from "./Pages/Contact";
 import AboutUs from "./Pages/AboutUs";
-import ViewOrder from "./Pages/ViewOrder";
+// import ViewOrder from "./Pages/ViewOrder";
 import Admin from "./Pages/Admin";
 import Error from "./Pages/Error";
 
@@ -52,13 +52,13 @@ export const routes = [
     path: "/aboutus",
     element: <AboutUs/>,
   },
-  {
-    path: "/vieworder",
-    element: 
-      <RequireAuth>
-        <ViewOrder/>
-      </RequireAuth>
-  },
+  // {
+  //   path: "/vieworder",
+  //   element: 
+  //     <RequireAuth>
+  //       <ViewOrder/>
+  //     </RequireAuth>
+  // },
   {
     path: "/admin",
     element: <Admin/>,
@@ -118,18 +118,12 @@ function Login() {
   );
 }
 
-function RequireAuth({ children }) {
-  let location = useLocation();
-  if (!Userfront.tokens.accessToken) {
-    return <Navigate to="/login" state={{ from: location }} replace />;
-  }
+// function RequireAuth({ children }) {
+//   let location = useLocation();
+//   if (!Userfront.tokens.accessToken) {
+//     return <Navigate to="/login" state={{ from: location }} replace />;
+//   }
   
-  return children;
-}
-
-
-
-//   function App() {
+//   return children;
 // }
 
-// export default App;

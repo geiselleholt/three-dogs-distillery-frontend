@@ -59,7 +59,7 @@ const NewLabelForm = ({ addLabelCallback, item }) => {
   return (
     <form onSubmit={submitLabelData}>
       <section>
-        <div >
+        <div className="label_spirit" >
           <section className="new__label__fields">
           <label htmlFor="name">Choose Your Bottle's Name</label>
           <p className="optional">*up to 50 characters</p>
@@ -159,13 +159,13 @@ const NewLabelForm = ({ addLabelCallback, item }) => {
           </section>
           </section>
           <section className="new__label__fields">
-            <p> Choose Your Image </p>
+          <label htmlFor="name">Choose Your Image </label>
             <p className="optional">*optional- will be black and white on label</p>
-            <input className="arial" type="file" placeholder="Upload an Image"
+            <input className="choose__file" type="file" placeholder="Upload an Image"
             onChange={uploadImage}/>
           </section>
-          <section className="new__label__fields">
-          <p>Preview:</p>
+          <section className="preview__label__fields">
+          <p className="label__preview">Label Preview:</p>
           <section className="preview__section">
             <p className={labelData.name_font}>{labelData.name}</p>
             <img alt= '' src={image} className='image'/>

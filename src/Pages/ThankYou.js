@@ -12,7 +12,7 @@ const ThankYou = () => {
           >
             <img alt="spinning logo" src={ three_dogs_logo } width={170} height={120}/>
           </motion.div>
-          <p className="title">Three Dog's Distillery</p>
+          <p className="title">Three Dog's Distillery- Thank You!</p>
           <section className="header__buttons">
         <section>
           <a href="/">

@@ -26,7 +26,7 @@ const ContactPage = () => {
           >
             <img alt="spinning logo" src={ three_dogs_logo } width={170} height={120}/>
           </motion.div>
-          <p className="title">Welcome to Three Dog's Distillery</p>
+          <p className="title">Three Dog's Distillery- Contact Nick</p>
           <section className="header__buttons">
             
           <span className="hello">{Userfront.tokens.accessToken ? `Hello ${Userfront.user.name}!` : ""}</span>
@@ -74,6 +74,7 @@ const ContactPage = () => {
         <p>
           Email Nick at 3DogsDistilling@gmail.com
         </p>
+        <a className="email" href="mailto:3DogsDistilling@gmail.com">Email Nick here</a>
         {/* <p>
           Click { <a href="/vieworder">
             <button className="buttons">View Order</button>

@@ -40,7 +40,7 @@ const NewItemForm = ({ addItemCallback }) => {
     <form onSubmit={submitItemData}>
         <div className="order">
         <div className="spirit">
-        <label className="titles" htmlFor="name">Choose Your Spirit</label>
+        <label className="item__titles" htmlFor="name">Choose Your Spirit</label>
           <p className="optional">*$100 per bottle- add $50 for Bourbon</p>
           <div className="pictures">
             <button
@@ -91,7 +91,7 @@ const NewItemForm = ({ addItemCallback }) => {
             </div>
           </div>
           <div className="spirit">
-          <label className="titles" htmlFor="name">Choose Your Flavor</label>
+          <label className="item__titles" htmlFor="name">Choose Your Flavor</label>
             <p className="optional">*optional- add $50</p>
             <div className="pictures">
             <button
@@ -142,7 +142,7 @@ const NewItemForm = ({ addItemCallback }) => {
             </div>
           </div>
           <div className="spirit">
-          <label className="titles" htmlFor="name">Choose Your Bottle Type</label>
+          <label className="item__titles" htmlFor="name">Choose Your Bottle Type</label>
             <p className="optional">*add $25 for Fancy Bottle</p>
             <p className="optional">750ml bottles- 750ml total in minis</p>
             <div className="pictures">
@@ -194,7 +194,7 @@ const NewItemForm = ({ addItemCallback }) => {
             </div>
           </div>
           <div className="quantity">
-          <label className="titles" htmlFor="name">Choose Your Quantity</label>
+          <label className="item__titles" htmlFor="name">Choose Your Quantity</label>
             <select
               className="select"
               name="quantity"
@@ -214,8 +214,8 @@ const NewItemForm = ({ addItemCallback }) => {
               <option>10</option>
             </select>
           </div>
-          <div className="preview">
-            <p>YOUR ORDER:</p>
+          <div className="item__preview">
+            <p>Order Preview:</p>
             <p>
               Spirit= {itemData.spirit}
             </p>

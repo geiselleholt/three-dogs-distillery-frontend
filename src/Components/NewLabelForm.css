@@ -1,11 +1,18 @@
 .new__label__fields {
     display: grid;
-    font-size:1.75rem;
+    font-size:2rem;
     -webkit-text-stroke: 1px black;
     color: crimson;
     font-weight: bold;
+    padding: 20pt;
     border: 2px solid brown;
     box-shadow: -15px 7px 1px brown;
+}
+
+
+.label_spirit {
+    display: grid;
+    font-size: 15pt;
     padding: 20pt;
 }
 
@@ -124,4 +131,27 @@
 
 .label__field {
     display: flex;
+}
+
+.choose__file {
+    font-size: x-large;
+    padding-top: 20pt;
+}
+
+.label__preview {
+    font-size:2rem;
+    -webkit-text-stroke: 1px black;
+    color: green;
+    font-weight: bold;
+}
+
+.preview__label__fields {
+    display: grid;
+    font-size:2rem;
+    -webkit-text-stroke: 1px black;
+    color: crimson;
+    font-weight: bold;
+    padding: 20pt;
+    border: 2px solid green;
+    box-shadow: -15px 7px 1px green;
 }

@@ -40,7 +40,7 @@ const Home = () => {
           >
             <img alt="spinning logo" src={ three_dogs_logo } width={170} height={120}/>
           </motion.div>
-          <p className="title">Welcome to Three Dog's Distillery</p>
+          <p className="title">Welcome to Three Dog's Distillery- Custom Made Spirits </p>
           <section className="header__buttons">
             
           <span className="hello">{Userfront.tokens.accessToken ? `Hello ${Userfront.user.name}!` : ""}</span>
@@ -93,8 +93,10 @@ const Home = () => {
             of bottle you'd like and desgin you own custom made label with an optional message!
           </p>
           <p>
-            You can make 100 mini bottles of your favorite flavor of vodka for your wedding with a message for your guests.
-            Or you can make an aged bottle of Cherry Bourbon in a fancy botlle for your Dad's birthday. 
+            You can make 100 mini bottles of your favorite flavor of vodka for your wedding with the date and a message for your guests. 
+            </p>
+            <p>
+            Or for your Dad's birthday you can design him an aged bottle of Cherry Bourbon in a fancy bottle with his picture on the label.
             </p>
             <p>
             The possibilites are endless!

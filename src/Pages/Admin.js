@@ -39,12 +39,12 @@ const Admin = () => {
   }, []);
 
   return (
-    <div>
-      <p className="title">ORDERS</p>
+    <div className="admin__title">
+      {/* <p className="title">ORDERS</p> */}
       <ItemList
       itemsData={itemsData}
       />
-      <p className="title">LABELS</p>
+      {/* <p className="title">LABELS</p> */}
       <LabelList
       labelsData={labelsData}
       />

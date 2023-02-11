@@ -11,3 +11,11 @@
     box-shadow: -15px 7px 1px brown;
     display: flex;
 }
+
+.email {
+    color: tan;
+}
+
+.email:hover {
+    color: crimson;
+}
