@@ -30,16 +30,17 @@ const Order = () => {
   }        
 
   const addItemData = async (itemFormData) => {
+    const newItemFormData = {...itemFormData, email: Userfront.user.email}
     const response = await axios.post(
       `${process.env.REACT_APP_BACKEND_URL}/items`,
-      itemFormData
+      newItemFormData
     );
     const newNewItem = (response.data.item)
     setNewItem(newNewItem)
   };
 
   const addLabel = async (labelData) => {
-    const newLabelData = {...labelData, email: Userfront.user.email}
+    const newLabelData = {...labelData}
     const response = await axios.post(
       `${process.env.REACT_APP_BACKEND_URL}/labels`,
       newLabelData
