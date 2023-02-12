@@ -13,8 +13,10 @@ const LabelList = (props) => {
           id={label.id}
           name={label.name}
           name_font={label.name_font}
+          name_font_color={label.name_font_color}
           message={label.message}
           message_font={label.message_font}
+          message_font_color={label.message_font_color}
           image={label.image}
           item_id={label.item_id}
         />
@@ -27,11 +29,13 @@ LabelList.propTypes = {
   labelsData: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired,
-      name_font: PropTypes.string.isRequired,
-      message: PropTypes.string.isRequired,
-      message_font: PropTypes.string.isRequired,
-      image: PropTypes.string.isRequired,
+      name: PropTypes.string,
+      name_font: PropTypes.string,
+      name_font_color: PropTypes.string,
+      message: PropTypes.string,
+      message_font: PropTypes.string,
+      message_font_color: PropTypes.string,
+      image: PropTypes.string,
       item_id: PropTypes.number.isRequired,
     })
   ),
