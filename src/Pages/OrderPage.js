@@ -11,7 +11,6 @@ import NewLabelForm from "../Components/NewLabelForm";
 
 const Order = () => {
   const [loggedIn, setLoggedIn] = useState(true);
-  const [allLabelData, setAllLabelData] = useState([]);
   const [newItem, setNewItem] = useState({
     spirit: "",
     flavor: "",
@@ -37,18 +36,6 @@ const Order = () => {
     );
     const newNewItem = (response.data.item)
     setNewItem(newNewItem)
-  };
-
-  const addLabel = async (labelData) => {
-    const newLabelData = {...labelData}
-    const response = await axios.post(
-      `${process.env.REACT_APP_BACKEND_URL}/labels`,
-      newLabelData
-    );
-    console.log(Userfront.user.email)
-    const newLabels = [...allLabelData];
-    newLabels.push({ ...response.data.label });
-    setAllLabelData(newLabels);
   };
 
 
@@ -103,7 +90,6 @@ const Order = () => {
         <section className="label__form">
         <p className="label_title">DESIGN YOUR LABEL:</p>
         <NewLabelForm
-        addLabelCallback={addLabel}
         item={newItem}
         />
         </section>

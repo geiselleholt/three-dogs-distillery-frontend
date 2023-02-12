@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "./NewItemForm.css";
+import ConfettiExplosion from 'react-confetti-explosion';
 
 const NewItemForm = ({ addItemCallback }) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -32,8 +33,6 @@ const NewItemForm = ({ addItemCallback }) => {
   const handleChange = (e) => {
     setItemData({ ...itemData, [e.target.name]: e.target.value });
   };
-
-
 
 
   return (
@@ -231,12 +230,14 @@ const NewItemForm = ({ addItemCallback }) => {
           </div>
         </div>
         <div className="button">
+        <ConfettiExplosion/>
       <button
     type="submit"
     className={!isSubmitted ? "label__button" : "submitted"}
     disabled={isSubmitted}
     >
       {!isSubmitted ? "Add Bottle(s)" : "Bottle(s) Added"}
+      {isSubmitted ? <ConfettiExplosion/> : ""}
     </button>
       </div>
     </form>

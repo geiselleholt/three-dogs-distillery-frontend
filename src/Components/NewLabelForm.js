@@ -1,9 +1,17 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
 import "./NewLabelForm.css";
+import ConfettiExplosion from 'react-confetti-explosion';
+import axios from "axios";
 
 
-const NewLabelForm = ({ addLabelCallback, item }) => {
+const addLabel = async (labelFormData) => {
+  await axios.post(
+    `${process.env.REACT_APP_BACKEND_URL}/labels`,
+    labelFormData
+  );
+};
+
+const NewLabelForm = ({ item }) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [labelData, setLabelData] = useState({
     name: "",
@@ -20,7 +28,7 @@ const NewLabelForm = ({ addLabelCallback, item }) => {
   const submitLabelData = (e) => {
     e.preventDefault();
     
-    addLabelCallback(labelData);
+    addLabel(labelData);
     toggleSubmitButton();
     setLabelData({
       name: "",
@@ -308,14 +316,12 @@ const NewLabelForm = ({ addLabelCallback, item }) => {
     disabled={isSubmitted}
     >
       {!isSubmitted ? "Add Label" : "Label Added"}
+      {isSubmitted ? <ConfettiExplosion/> : ""}
     </button>
     </section>
     </form>
   );
 };
 
-NewLabelForm.propTypes = {
-  addLabelCallback: PropTypes.func.isRequired,
-};
 
 export default NewLabelForm;

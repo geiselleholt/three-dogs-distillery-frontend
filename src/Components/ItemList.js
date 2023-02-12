@@ -6,8 +6,6 @@ import "./ItemList.css";
 
 
 const ItemList = (props) => {
-
-
   return (
     <ul>
       {props.itemsData.map((item) => (
@@ -18,7 +16,8 @@ const ItemList = (props) => {
           flavor={item.flavor}
           bottle={item.bottle}
           quantity={item.quantity}
-          email={item.email}          
+          email={item.email}
+          label={item.label}          
         />
       ))}
     </ul>
@@ -33,7 +32,8 @@ ItemList.propTypes = {
       flavor: PropTypes.string.isRequired,
       bottle: PropTypes.string.isRequired,
       quantity: PropTypes.number.isRequired,
-      email: PropTypes.string.isRequired,
+      email: PropTypes.string,
+      label: PropTypes.array,
     })
   ),
 };
