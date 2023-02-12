@@ -26,16 +26,6 @@
     color: crimson;
 }
 
-.preview__section {
-    border: solid;
-    border-color: black;
-    text-align: center;
-    color: black;
-    width: 550pt;
-    /* height: 300pt; */
-    border: 2px solid green;
-    box-shadow: -15px 7px 1px green;
-}
 
 .submit__button {
     font-size:1.5rem;
@@ -50,39 +40,10 @@
     font-size: large;
 }
 
-.name_arial {
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: 30pt;
-}
-
-.message_arial {
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: 15pt;
-}
-
-.name_cursive {
-    font-family: cursive;
-    font-size: 30pt;
-}
-
-.message_cursive {
-    font-family: cursive;
-    font-size: 15pt;
-}
 
 .cursive {
     font-family: cursive;
     font-size: large;
-}
-
-.name_courier {
-    font-family:'Courier New', Courier, monospace;
-    font-size: 30pt;
-}
-
-.message_courier {
-    font-family:'Courier New', Courier, monospace;
-    font-size: 15pt;
 }
 
 .courier {
@@ -90,30 +51,12 @@
     font-size: large;
 }
 
-.name_fantasy {
-    font-family:fantasy;
-    font-size: 30pt;
-}
-
-.message_fantasy {
-    font-family:fantasy;
-    font-size: 15pt;
-}
 
 .fantasy {
     font-family:fantasy;
     font-size: large;
 }
 
-.name_roman {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 30pt;
-}
-
-.message_roman {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 15pt;
-}
 
 .roman {
     font-family: 'Times New Roman', Times, serif;
@@ -126,7 +69,7 @@
 }
 
 .image {
-    height: 125px;
+    height: 150px;
 }
 
 .label__field {
@@ -148,10 +91,43 @@
 .preview__label__fields {
     display: grid;
     font-size:2rem;
-    -webkit-text-stroke: 1px black;
+    /* -webkit-text-stroke: 1px black; */
     color: crimson;
     font-weight: bold;
     padding: 20pt;
     border: 2px solid green;
     box-shadow: -15px 7px 1px green;
+}
+
+.purple {
+    font-size: x-large;
+    background-color: purple;
+    font-weight: bold;
+    color: white;
+}
+
+.green {
+    font-size: x-large;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+}
+
+.yellow {
+    font-size: x-large;
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.blue {
+    font-size: x-large;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+}
+
+.red {
+    font-size: x-large;
+    background-color: red;
+    font-weight: bold;
 }

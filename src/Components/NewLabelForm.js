@@ -6,11 +6,14 @@ import "./NewLabelForm.css";
 const NewLabelForm = ({ addLabelCallback, item }) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [labelData, setLabelData] = useState({
-    name_font: "",
     name: "",
-    message_font: "",
+    name_font: "",
+    name_font_color: "",
     message: "",
+    message_font: "",
+    message_font_color: "",
     image: "",
+    background_color: "",
   });
   const [image, setImage] = useState("")
 
@@ -20,11 +23,14 @@ const NewLabelForm = ({ addLabelCallback, item }) => {
     addLabelCallback(labelData);
     toggleSubmitButton();
     setLabelData({
-      name_font: "",
       name: "",
-      message_font: "",
+      name_font: "",
+      name_font_color: "",
       message: "",
+      message_font: "",
+      message_font_color: "",
       image: "",
+      background_color: "",
     });
   };
 
@@ -76,37 +82,75 @@ const NewLabelForm = ({ addLabelCallback, item }) => {
               type="button"
               name="name_font"
               id="name_font"
-              value="name_arial"
+              value="arial"
               onClick={handleChange} 
               className="arial">Arial</button>
             <button
               type="button"
               name="name_font"
               id="name_font"
-              value="name_cursive"
+              value="cursive"
               onClick={handleChange}
               className="cursive">Cursive</button>
             <button 
               type="button"
               name="name_font"
               id="name_font"
-              value="name_fantasy"
+              value="fantasy"
               onClick={handleChange}
               className="fantasy">Fantasy</button>
             <button
               type="button"             
               name="name_font"
               id="name_font"
-              value="name_courier"
+              value="courier"
               onClick={handleChange}
               className="courier">Courier</button>
             <button
               type="button"             
               name="name_font"
               id="name_font"
-              value="name_roman"
+              value="roman"
               onClick={handleChange}
               className="roman">Roman</button>
+          </section>
+          <section className="message_preview">
+            <p>Choose Your Name Font's Color</p>
+            <button
+              type="button" 
+              name="name_font_color"
+              id="name_font_color"
+              value="blue"
+              onClick={handleChange}
+              className="blue">Blue</button>
+            <button
+              type="button" 
+              name="name_font_color"
+              id="name_font_color"
+              value="red"
+              onClick={handleChange}
+            className="red">Red</button>
+            <button
+              type="button" 
+              name="name_font_color"
+              id="name_font_color"
+              value="green"
+              onClick={handleChange}
+              className="green">Green</button>
+            <button
+              type="button" 
+              name="name_font_color"
+              id="name_font_color"
+              value="yellow"
+              onClick={handleChange}
+              className="yellow">Yellow</button>
+            <button
+              type="button"               
+              name="name_font_color"
+              id="name_font_color"
+              value="purple"
+              onClick={handleChange}
+              className="purple">Purple</button>
           </section>
           </section>
           <section className="new__label__fields">
@@ -125,51 +169,132 @@ const NewLabelForm = ({ addLabelCallback, item }) => {
               type="button" 
               name="message_font"
               id="message_font"
-              value="message_arial"
+              value="arial"
               onClick={handleChange}
               className="arial">Arial</button>
             <button
               type="button" 
               name="message_font"
               id="message_font"
-              value="message_cursive"
+              value="cursive"
               onClick={handleChange}
             className="cursive">Cursive</button>
             <button
               type="button" 
               name="message_font"
               id="message_font"
-              value="message_fantasy"
+              value="fantasy"
               onClick={handleChange}
               className="fantasy">Fantasy</button>
             <button
               type="button" 
               name="message_font"
               id="message_font"
-              value="message_courier"
+              value="courier"
               onClick={handleChange}
               className="courier">Courier</button>
             <button
               type="button"               
               name="message_font"
               id="message_font"
-              value="message_roman"
+              value="roman"
               onClick={handleChange}
               className="roman">Roman</button>
+          </section>
+          <section className="message_preview">
+            <p>Choose Your Message Font's Color</p>
+            <button
+              type="button" 
+              name="message_font_color"
+              id="message_font_color"
+              value="blue"
+              onClick={handleChange}
+              className="blue">Blue</button>
+            <button
+              type="button" 
+              name="message_font_color"
+              id="message_font_color"
+              value="red"
+              onClick={handleChange}
+            className="red">Red</button>
+            <button
+              type="button" 
+              name="message_font_color"
+              id="message_font_color"
+              value="green"
+              onClick={handleChange}
+              className="green">Green</button>
+            <button
+              type="button" 
+              name="message_font_color"
+              id="message_font_color"
+              value="yellow"
+              onClick={handleChange}
+              className="yellow">Yellow</button>
+            <button
+              type="button"               
+              name="message_font_color"
+              id="message_font_color"
+              value="purple"
+              onClick={handleChange}
+              className="purple">Purple</button>
           </section>
           </section>
           <section className="new__label__fields">
           <label htmlFor="name">Choose Your Image </label>
-            <p className="optional">*optional- will be black and white on label</p>
+            <p className="optional">*optional</p>
             <input className="choose__file" type="file" placeholder="Upload an Image"
             onChange={uploadImage}/>
+                      <section className="message_preview">
+            <p>Choose Your Message Font's Color</p>
+            <button
+              type="button" 
+              name="background_color"
+              id="background_color"
+              value="blue"
+              onClick={handleChange}
+              className="blue">Blue</button>
+            <button
+              type="button" 
+              name="background_color"
+              id="background_color"
+              value="red"
+              onClick={handleChange}
+            className="red">Red</button>
+            <button
+              type="button" 
+              name="background_color"
+              id="background_color"
+              value="green"
+              onClick={handleChange}
+              className="green">Green</button>
+            <button
+              type="button" 
+              name="background_color"
+              id="background_color"
+              value="yellow"
+              onClick={handleChange}
+              className="yellow">Yellow</button>
+            <button
+              type="button"               
+              name="background_color"
+              id="background_color"
+              value="purple"
+              onClick={handleChange}
+              className="purple">Purple</button>
           </section>
+          </section>
+
           <section className="preview__label__fields">
           <p className="label__preview">Label Preview:</p>
-          <section className="preview__section">
-            <p className={labelData.name_font}>{labelData.name}</p>
+          <section style={{border: 'solid black 5pt', textAlign: 'center', width: '550pt',
+            backgroundColor: labelData.background_color}}
+            >
+          <p style={{color: labelData.name_font_color, fontFamily: labelData.name_font,
+               fontSize: 45}}>{labelData.name}</p>
             <img alt= '' src={image} className='image'/>
-            <p className={labelData.message_font}>{labelData.message}</p>
+            <p style={{color: labelData.message_font_color, fontFamily: labelData.message_font,
+               fontSize: 25}}>{labelData.message}</p>
           </section>
           </section>
           <section className="button__section">
