@@ -13,6 +13,7 @@ const Label = (props) => {
       <p>Message Font: {props.message_font}</p>
       <p>Message Font Color: {props.message_font_color}</p>
       <p>Image: {props.image}</p>
+      <p>Background Color: {props.background_color}</p>
     </section>
   );
 };
@@ -26,6 +27,7 @@ Label.propTypes = {
   message_font: PropTypes.string,
   message_font_color: PropTypes.string,
   image: PropTypes.string,
+  background_color: PropTypes.string,
   item_id: PropTypes.number.isRequired,
 };
 

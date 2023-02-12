@@ -18,6 +18,7 @@ const LabelList = (props) => {
           message_font={label.message_font}
           message_font_color={label.message_font_color}
           image={label.image}
+          background_color={label.background_color}
           item_id={label.item_id}
         />
       ))}
@@ -36,6 +37,7 @@ LabelList.propTypes = {
       message_font: PropTypes.string,
       message_font_color: PropTypes.string,
       image: PropTypes.string,
+      backgound_color: PropTypes.string,
       item_id: PropTypes.number.isRequired,
     })
   ),
