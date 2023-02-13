@@ -3,7 +3,6 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import "./Admin.css";
 
-
 const getAllItemsApi = async () => {
   const response = await axios.get(
     `${process.env.REACT_APP_BACKEND_URL}/items`

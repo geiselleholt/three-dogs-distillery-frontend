@@ -2,9 +2,11 @@ import "./CancelOrder.css";
 import { motion } from "framer-motion";
 import three_dogs_logo from "../images/three_dogs_logo.jpg";
 import ConfettiExplosion from 'react-confetti-explosion';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {  faFacebook, faTwitter, faYoutube, faTiktok, faInstagram  } from '@fortawesome/free-brands-svg-icons';
+
 
 const ThankYou = () => {
-  
   return (
     <div>
       <h1 className="home__header">
@@ -62,6 +64,23 @@ const ThankYou = () => {
           <a href="/aboutus">
             <button className="buttons">About Us</button>
           </a>
+        </section>
+        <section>
+            <a className="icons" href="https://facebook.com">
+              <FontAwesomeIcon icon={faFacebook}/>
+            </a>
+            <a className="icons" href="https://twitter.com">
+              <FontAwesomeIcon icon={faTwitter}/>
+            </a>
+            <a className="icons" href="https://instagram.com">
+              <FontAwesomeIcon icon={faInstagram}/>
+            </a>
+            <a className="icons" href="https://youtube.com">
+              <FontAwesomeIcon icon={faYoutube}/>
+            </a>
+            <a className="icons" href="https://tiktok.com">
+              <FontAwesomeIcon icon={faTiktok}/>
+            </a>
         </section>
         <ConfettiExplosion/>
         </footer>

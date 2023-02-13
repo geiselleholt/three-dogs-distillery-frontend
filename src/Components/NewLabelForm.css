@@ -131,3 +131,22 @@
     background-color: red;
     font-weight: bold;
 }
+
+.orange {
+    font-size: x-large;
+    background-color: orange;
+    font-weight: bold;
+}
+
+.black {
+    font-size: x-large;
+    background-color: black;
+    font-weight: bold;
+    color: white;
+}
+
+.white {
+    font-size: x-large;
+    background-color: white;
+    font-weight: bold;
+}

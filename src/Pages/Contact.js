@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import three_dogs_logo from "../images/three_dogs_logo.jpg";
 import bottles from "../images/bottles.jpg";
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {  faFacebook, faTwitter, faYoutube, faTiktok, faInstagram  } from '@fortawesome/free-brands-svg-icons';
 
 const ContactPage = () => {
   const [loggedIn, setLoggedIn] = useState(true);
@@ -108,7 +110,23 @@ const ContactPage = () => {
             <button className="buttons">View Order</button>
           </a>
         </section> */}
-        {/* <section>Follow Us Logos</section> */}
+        <section>
+            <a className="icons" href="https://facebook.com">
+              <FontAwesomeIcon icon={faFacebook}/>
+            </a>
+            <a className="icons" href="https://twitter.com">
+              <FontAwesomeIcon icon={faTwitter}/>
+            </a>
+            <a className="icons" href="https://instagram.com">
+              <FontAwesomeIcon icon={faInstagram}/>
+            </a>
+            <a className="icons" href="https://youtube.com">
+              <FontAwesomeIcon icon={faYoutube}/>
+            </a>
+            <a className="icons" href="https://tiktok.com">
+              <FontAwesomeIcon icon={faTiktok}/>
+            </a>
+        </section>
       </footer>
       {/* </main> */}
     </div>

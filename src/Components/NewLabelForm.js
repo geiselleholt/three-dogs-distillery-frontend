@@ -3,7 +3,6 @@ import "./NewLabelForm.css";
 import ConfettiExplosion from 'react-confetti-explosion';
 import axios from "axios";
 
-
 const addLabel = async (labelFormData) => {
   await axios.post(
     `${process.env.REACT_APP_BACKEND_URL}/labels`,
@@ -159,6 +158,27 @@ const NewLabelForm = ({ item }) => {
               value="purple"
               onClick={handleChange}
               className="purple">Purple</button>
+            <button
+              type="button"               
+              name="name_font_color"
+              id="name_font_color"
+              value="orange"
+              onClick={handleChange}
+              className="orange">Orange</button>
+            <button
+              type="button"               
+              name="name_font_color"
+              id="name_font_color"
+              value="black"
+              onClick={handleChange}
+              className="black">Black</button>
+            <button
+              type="button"               
+              name="name_font_color"
+              id="name_font_color"
+              value="white"
+              onClick={handleChange}
+              className="white">White</button>
           </section>
           </section>
           <section className="new__label__fields">
@@ -246,6 +266,27 @@ const NewLabelForm = ({ item }) => {
               value="purple"
               onClick={handleChange}
               className="purple">Purple</button>
+            <button
+              type="button"               
+              name="message_font_color"
+              id="message_font_color"
+              value="orange"
+              onClick={handleChange}
+              className="orange">Orange</button>
+            <button
+              type="button"               
+              name="message_font_color"
+              id="message_font_color"
+              value="black"
+              onClick={handleChange}
+              className="black">Black</button>
+            <button
+              type="button"               
+              name="message_font_color"
+              id="message_font_color"
+              value="white"
+              onClick={handleChange}
+              className="white">White</button>
           </section>
           </section>
           <section className="new__label__fields">
@@ -290,16 +331,36 @@ const NewLabelForm = ({ item }) => {
               value="purple"
               onClick={handleChange}
               className="purple">Purple</button>
+            <button
+              type="button"               
+              name="background_color"
+              id="background_color"
+              value="orange"
+              onClick={handleChange}
+              className="orange">Orange</button>
+            <button
+              type="button"               
+              name="background_color"
+              id="background_color"
+              value="black"
+              onClick={handleChange}
+              className="black">Black</button>
+            <button
+              type="button"               
+              name="background_color"
+              id="background_color"
+              value="white"
+              onClick={handleChange}
+              className="white">White</button>
           </section>
           </section>
-
           <section className="preview__label__fields">
           <p className="label__preview">Label Preview:</p>
           <section style={{border: 'solid black 5pt', textAlign: 'center', width: '550pt',
             backgroundColor: labelData.background_color}}
             >
           <p style={{color: labelData.name_font_color, fontFamily: labelData.name_font,
-               fontSize: 45}}>{labelData.name}</p>
+               fontSize: 45, fontWeight: 'bold'}}>{labelData.name}</p>
             <img alt= '' src={image} className='image'/>
             <p style={{color: labelData.message_font_color, fontFamily: labelData.message_font,
                fontSize: 25}}>{labelData.message}</p>
@@ -322,6 +383,5 @@ const NewLabelForm = ({ item }) => {
     </form>
   );
 };
-
 
 export default NewLabelForm;

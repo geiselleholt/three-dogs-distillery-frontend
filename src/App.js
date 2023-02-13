@@ -47,12 +47,8 @@ export const routes = [
     element: <ThankYou/>,
   },
   {
-    path: "/cancelOrder",
+    path: "/cancelorder",
     element: <CancelOrder/>,
-  },
-  {
-    path: "/contact",
-    element: <Contact/>,
   },
   {
     path: "/contact",
