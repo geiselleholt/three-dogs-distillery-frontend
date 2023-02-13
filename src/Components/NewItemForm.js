@@ -49,7 +49,7 @@ const NewItemForm = ({ addItemCallback }) => {
               value="Brandy"
               onClick={handleChange} 
               className="each__spirit">
-              Brandy- made from all natural fruits, quality sugar, fermented for 2 weeks
+              BRANDY- made from all natural fruits, quality sugar, fermented for 30 days
             </button>
             <button
               type="button"
@@ -58,7 +58,7 @@ const NewItemForm = ({ addItemCallback }) => {
               value="Bourbon"
               onClick={handleChange}
               className="each__spirit">
-              Bourbon- made from barley and rye, fermented for 30 days, Aged with chips for 60 days
+              BOURBAN- made from barley and rye, fermented for 30 days, Aged in mini-barrel for 60 days
             </button>
             <button
               type="button"
@@ -67,7 +67,7 @@ const NewItemForm = ({ addItemCallback }) => {
               value="Whiskey"
               onClick={handleChange}
               className="each__spirit">
-              Whiskey- made with barley, grains. Fermented for 30 days. Aged with chips for 30 days 
+              WHISKEY- made from barley and grains. Fermented for 30 days. Aged with chips for 30 days 
             </button>
             <button           
               type="button"  
@@ -76,7 +76,7 @@ const NewItemForm = ({ addItemCallback }) => {
               value="Moonshine"
               onClick={handleChange}
               className="each__spirit">
-              Moonshine- made with Corn, barley and yeast. Double distilled for smooth taste and quality
+              MOONSHINE- made from corn, barley and yeast. Double distilled for smooth taste and quality
             </button>
             <button          
               type="button"   
@@ -85,7 +85,7 @@ const NewItemForm = ({ addItemCallback }) => {
               value="Vodka"
               onClick={handleChange}
               className="each__spirit">
-              Vodka- Made from wheat, rye or potato. Fermented for 30 days. Double distilled
+              VODKA- made from wheat, rye or potato. Fermented for 30 days. Double distilled
             </button>
             </div>
           </div>
@@ -143,7 +143,7 @@ const NewItemForm = ({ addItemCallback }) => {
           <div className="spirit">
           <label className="item__titles" htmlFor="name">Choose Your Bottle Type</label>
             <p className="optional">*add $25 for Fancy Bottle</p>
-            <p className="optional">750ml bottles- 750ml total in minis</p>
+            <p className="optional">*750ml bottles- 750ml total in minis</p>
             <div className="pictures">
             <button
               type="button"
@@ -215,16 +215,16 @@ const NewItemForm = ({ addItemCallback }) => {
           </div>
           <div className="item__preview">
             <p>Order Preview:</p>
-            <p>
+            <p className="preview__items">
               Spirit= {itemData.spirit}
             </p>
-            <p>
+            <p className="preview__items">
               Flavor= {itemData.flavor}
             </p>
-            <p>
+            <p className="preview__items">
               Bottle= {itemData.bottle}
             </p>
-            <p>
+            <p className="preview__items">
               Quantity= {itemData.quantity}
             </p>
           </div>

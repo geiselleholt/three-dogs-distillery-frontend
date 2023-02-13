@@ -203,3 +203,7 @@
     color: crimson;
     font-size: xx-large;
 }
+
+.icons:hover {
+    color: white;
+}

@@ -97,9 +97,9 @@ const AboutUs = () => {
         <section className="brandy">
         <img alt="brandie and chris" src={Brandie_Chris}></img>
           About Brandie Rae
-          <p>Pictured with her beautiful mama Chris, also Nick's wife, Brandie is an well aged beauty.
-            She had a little bit of an attitude but she can be nice and fun when she wants to be. Nick
-            made a Whiskey just for her type. It tastes beautiful on the palate becasue it's aged to 
+          <p>Pictured with her beautiful mama Chris, also Nick's wife, Brandie is a well aged beauty.
+            She has a little bit of an attitude but she can be nice and fun when she wants to be. Nick
+            made a Whiskey just for her type. It tastes beautiful on the palate because it's aged to 
             perfection!
           </p>
         </section>
@@ -116,7 +116,7 @@ const AboutUs = () => {
         <img alt="emma" src={emma}></img>
           About Emma
           <p>Emma is sweet and loves to eat! She was the runt of the litter 
-            but she's grown- more wide than up- to be healthy and strong.
+            but she's grown- more horizontally than vertically- to be healthy and strong.
             Nick crafted Emma's Elixer with her traits in mind. A sweet and strong
             Brandy that will lift your spirits and your palate!</p>
         </section>
@@ -163,7 +163,6 @@ const AboutUs = () => {
             </a>
         </section>
       </footer>
-      {/* </main> */}
     </div>
   );
 };

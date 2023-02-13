@@ -71,12 +71,12 @@ const ContactPage = () => {
         <img alt="bottles" src={bottles}></img>
         <section className="intro">
         <p>
-          Call Nick at (720)-467-0390
+          Call Nick at (720)-467-0393
         </p>
         <p>
           Email Nick at 3DogsDistilling@gmail.com
         </p>
-        <a className="email" href="mailto:3DogsDistilling@gmail.com">Email Nick here</a>
+        <a className="email" href="mailto:3DogsDistilling@gmail.com">Or click herer to email Nick</a>
         {/* <p>
           Click { <a href="/vieworder">
             <button className="buttons">View Order</button>
