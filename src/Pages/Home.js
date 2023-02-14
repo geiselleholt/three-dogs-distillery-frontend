@@ -58,14 +58,12 @@ const Home = () => {
                 </button>
               </a>}
           </section>
-
           <section>
               {Userfront.user.email === "guamgirl1213@gmail.com" &&
               <a href="/admin">
                 <button className="buttons">Admin</button>
               </a>}
             </section>
-
             <section>
               {!Userfront.tokens.accessToken &&
               <a href="/signup">
@@ -73,15 +71,16 @@ const Home = () => {
               </a>}
             </section>
             <section>
+              {Userfront.tokens.accessToken &&
+              <a href="/vieworder">
+                <button className="buttons">Order Status</button>
+              </a>}
+            </section>
+            <section>
               <a href="/orderpage">
                 <button className="buttons">Order Now</button>
               </a>
             </section>
-            {/* <section>
-              <a href="/viewcart">
-                <button className="buttons">View Cart</button>
-              </a>
-            </section> */}
           </section>  
         </h1>
         <section className="processes">
@@ -141,27 +140,22 @@ const Home = () => {
             <button className="buttons">About Us</button>
           </a>
         </section>
-        {/* <section>
-          <a href="/vieworder">
-            <button className="buttons">View Order</button>
+        <section>
+          <a className="icons" href="https://facebook.com">
+            <FontAwesomeIcon icon={faFacebook}/>
           </a>
-        </section> */}
-              <section>
-            <a className="icons" href="https://facebook.com">
-              <FontAwesomeIcon icon={faFacebook}/>
-            </a>
-            <a className="icons" href="https://twitter.com">
-              <FontAwesomeIcon icon={faTwitter}/>
-            </a>
-            <a className="icons" href="https://instagram.com">
-              <FontAwesomeIcon icon={faInstagram}/>
-            </a>
-            <a className="icons" href="https://youtube.com">
-              <FontAwesomeIcon icon={faYoutube}/>
-            </a>
-            <a className="icons" href="https://tiktok.com">
-              <FontAwesomeIcon icon={faTiktok}/>
-            </a>
+          <a className="icons" href="https://twitter.com">
+            <FontAwesomeIcon icon={faTwitter}/>
+          </a>
+          <a className="icons" href="https://instagram.com">
+            <FontAwesomeIcon icon={faInstagram}/>
+          </a>
+          <a className="icons" href="https://youtube.com">
+            <FontAwesomeIcon icon={faYoutube}/>
+          </a>
+          <a className="icons" href="https://tiktok.com">
+            <FontAwesomeIcon icon={faTiktok}/>
+          </a>
         </section>
       </footer>
       {/* </main> */}

@@ -1,21 +1,24 @@
 import Userfront from "@userfront/react";
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import three_dogs_logo from "../images/three_dogs_logo.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {  faFacebook, faTwitter, faYoutube, faTiktok, faInstagram  } from '@fortawesome/free-brands-svg-icons';
 import ItemList from "../Components/ItemList.js";
 
-const getItemByEmailApi = async (email) => {
+
+const getAllItemsApi = async () => {
   const response = await axios.get(
-    `${process.env.REACT_APP_BACKEND_URL}/items/${email}`
+    `${process.env.REACT_APP_BACKEND_URL}/items/${Userfront.user.email}`
   );
   return response.data;
 };
 
 const ViewOrder = () => {
   const [loggedIn, setLoggedIn] = useState(true);
+  const [itemsData, setItemsData] = useState([]);
+
 
   const toggleLoggedIn = () => {
     setLoggedIn(!loggedIn);
@@ -26,6 +29,15 @@ const ViewOrder = () => {
     toggleLoggedIn();
   } 
 
+  const getAllItems = async () => {
+    const items = await getAllItemsApi();
+    setItemsData(items);
+  };
+
+  useEffect(() => {
+    getAllItems();
+  }, []);
+
   return (
     <div>
               <h1 className="home__header">
@@ -35,7 +47,7 @@ const ViewOrder = () => {
           >
             <img alt="spinning logo" src={ three_dogs_logo } width={170} height={120}/>
           </motion.div>
-          <p className="title">Three Dog's Distillery- Contact Nick</p>
+          <p className="title">Three Dog's Distillery- View Your Order</p>
           <section className="header__buttons">
             
           <span className="hello">{Userfront.tokens.accessToken ? `Hello ${Userfront.user.name}!` : ""}</span>
@@ -62,11 +74,6 @@ const ViewOrder = () => {
                 <button className="buttons">Order Now</button>
               </a>
             </section>
-            {/* <section>
-              <a href="/viewcart">
-                <button className="buttons">View Cart</button>
-              </a>
-            </section> */}
             <section>
           <a className="links" href="/home">
             <button className="buttons">Home</button>
@@ -74,10 +81,12 @@ const ViewOrder = () => {
         </section>
           </section>  
         </h1>
-      Hello from ViewOrder
-      {/* <ItemList
-      itemsData={itemsData}
-      /> */}
+      <p className="titles">Here's your order:</p>
+      <section className="view__title">
+        <ItemList
+        itemsData={itemsData}
+        />
+      </section>
       <footer className="home__footer">
         <section>
         <img alt="spinning logo" src={ three_dogs_logo } width={200} height={100}/>
@@ -97,11 +106,6 @@ const ViewOrder = () => {
             <button className="buttons">About Us</button>
           </a>
         </section>
-        {/* <section>
-          <a href="/vieworder">
-            <button className="buttons">View Order</button>
-          </a>
-        </section> */}
         <section>
             <a className="icons" href="https://facebook.com">
               <FontAwesomeIcon icon={faFacebook}/>

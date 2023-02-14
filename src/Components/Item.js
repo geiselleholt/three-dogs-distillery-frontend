@@ -11,6 +11,7 @@ const Item = (props) => {
       <li>Flavor: {props.flavor}</li>
       <li>Bottle: {props.bottle}</li>
       <li>Quantity: {props.quantity}</li>
+      {props.label ?
       <ul> Label Info:
       <li>Id: {props.label[0].id}</li>
       <li>Bottle Name: {props.label[0].name}</li>
@@ -21,7 +22,7 @@ const Item = (props) => {
       <li>Message Font Color: {props.label[0].message_font_color}</li>
       <li>Image: {props.label[0].image}</li>
       <li>Background Color: {props.label[0].background_color}</li>
-      </ul>
+      </ul> : []}
     </ul>
   );
 };

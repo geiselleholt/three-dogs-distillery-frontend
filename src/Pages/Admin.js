@@ -1,7 +1,6 @@
 import ItemList from "../Components/ItemList.js";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import "./Admin.css";
 
 const getAllItemsApi = async () => {
   const response = await axios.get(

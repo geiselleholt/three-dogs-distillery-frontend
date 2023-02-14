@@ -18,7 +18,7 @@ const Order = () => {
     bottle: "",
     quantity: "",
     id: "",
-  })
+  });
 
   const toggleLoggedIn = () => {
     setLoggedIn(!loggedIn);
@@ -27,7 +27,7 @@ const Order = () => {
   const logoutUser = () => {
     Userfront.logout();
     toggleLoggedIn();
-  }        
+  };        
 
   const addItemData = async (itemFormData) => {
     const newItemFormData = {...itemFormData, email: Userfront.user.email}

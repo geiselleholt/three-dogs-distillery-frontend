@@ -60,11 +60,12 @@ const AboutUs = () => {
                 <button className="buttons">Order Now</button>
               </a>
             </section>
-            {/* <section>
-              <a href="/viewcart">
-                <button className="buttons">View Cart</button>
-              </a>
-            </section> */}
+            <section>
+              {Userfront.tokens.accessToken &&
+              <a href="/vieworder">
+                <button className="buttons">Order Status</button>
+              </a>}
+            </section>
             <section>
           <a className="links" href="/home">
             <button className="buttons">Home</button>
@@ -140,11 +141,6 @@ const AboutUs = () => {
             <button className="buttons">Contact Nick</button>
           </a>
         </section>
-        {/* <section>
-          <a href="/vieworder">
-            <button className="buttons">View Order</button>
-          </a>
-        </section> */}
         <section>
             <a className="icons" href="https://facebook.com">
               <FontAwesomeIcon icon={faFacebook}/>

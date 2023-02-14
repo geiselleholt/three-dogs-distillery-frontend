@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import "./ItemList.css";
 
 
-
 const ItemList = (props) => {
   return (
     <ul>

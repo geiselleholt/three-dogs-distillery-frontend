@@ -16,7 +16,6 @@ import Admin from "./Pages/Admin";
 import Error from "./Pages/Error";
 
 
-
 export const routes = [
   {
     path: "/",
@@ -67,7 +66,10 @@ export const routes = [
   },
   {
     path: "/admin",
-    element: <Admin/>,
+    element: 
+    <RequireAuth>
+      <Admin/>
+    </RequireAuth>
   },
   {
     path: "*" ,
@@ -94,6 +96,17 @@ function SignUp() {
   );
 }
 
+
+function RequireAuth({ children }) {
+  let location = useLocation();
+  if (!Userfront.tokens.accessToken) {
+    return <Navigate to="/login" state={{ from: location }} replace />;
+  }
+  
+  return children;
+}
+
+
 // UserFront for OAth
 Userfront.init("7n879v6b");
 
@@ -104,6 +117,7 @@ const SignupForm = Userfront.build({
 const LoginForm = Userfront.build({
   toolId: "mlbdmll",
 });
+
 
 function Login() {
   return (
@@ -124,12 +138,4 @@ function Login() {
   );
 }
 
-function RequireAuth({ children }) {
-  let location = useLocation();
-  if (!Userfront.tokens.accessToken) {
-    return <Navigate to="/login" state={{ from: location }} replace />;
-  }
-  
-  return children;
-}
 

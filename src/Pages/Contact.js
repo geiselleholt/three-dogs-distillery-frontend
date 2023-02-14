@@ -55,11 +55,12 @@ const ContactPage = () => {
                 <button className="buttons">Order Now</button>
               </a>
             </section>
-            {/* <section>
-              <a href="/viewcart">
-                <button className="buttons">View Cart</button>
-              </a>
-            </section> */}
+            <section>
+              {Userfront.tokens.accessToken &&
+              <a href="/vieworder">
+                <button className="buttons">Order Status</button>
+              </a>}
+            </section>
             <section>
           <a className="links" href="/home">
             <button className="buttons">Home</button>
@@ -76,13 +77,12 @@ const ContactPage = () => {
         <p>
           Email Nick at 3DogsDistilling@gmail.com
         </p>
-        <a className="email" href="mailto:3DogsDistilling@gmail.com">Or click herer to email Nick</a>
-        {/* <p>
+        <a className="email" href="mailto:3DogsDistilling@gmail.com">Or click here to email Nick</a>
+        <p>
           Click { <a href="/vieworder">
-            <button className="buttons">View Order</button>
-          </a> } to review your order or to see your order's updated status or 
-          delvery date (must be logged in to view order)
-        </p> */}
+            <button className="buttons">View Order Status</button>
+          </a> } to review your order or to see your order's updated status (must be logged in)
+        </p>
         <p> Nick is here for you 24-7 to answer questions about your current order or future orders</p>
       </section>
       </section>
@@ -105,11 +105,6 @@ const ContactPage = () => {
             <button className="buttons">About Us</button>
           </a>
         </section>
-        {/* <section>
-          <a href="/vieworder">
-            <button className="buttons">View Order</button>
-          </a>
-        </section> */}
         <section>
             <a className="icons" href="https://facebook.com">
               <FontAwesomeIcon icon={faFacebook}/>
