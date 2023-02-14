@@ -40,6 +40,13 @@
     font-size: large;
 }
 
+.arial:focus, .cursive:focus, .courier:focus, .fantasy:focus, .roman:focus,
+.orange:focus, .blue:focus, .red:focus, .white:focus, .black:focus, .yellow:focus,
+.green:focus, .purple:focus
+{
+    border: solid crimson 5pt;
+}
+
 
 .cursive {
     font-family: cursive;

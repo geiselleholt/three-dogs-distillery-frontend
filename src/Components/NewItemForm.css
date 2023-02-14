@@ -41,7 +41,7 @@
     box-shadow: -15px 7px 1px brown;
 }
 
-.each__spirit:focus {
+.each__spirit:focus, .each__spirit:hover {
     border: 2px solid green;
     box-shadow: -15px 7px 1px green;
 }
@@ -58,7 +58,7 @@
     box-shadow: -15px 7px 1px brown;
 }
 
-.cherry:focus {
+.cherry:focus, .cherry:hover {
     border: 2px solid green;
     box-shadow: -15px 7px 1px green;
 }
@@ -75,7 +75,7 @@
     box-shadow: -15px 7px 1px brown;
 }
 
-.apple:focus {
+.apple:focus, .apple:hover {
     border: 2px solid green;
     box-shadow: -15px 7px 1px green;
 }
@@ -92,7 +92,7 @@
     box-shadow: -15px 7px 1px brown;
 }
 
-.citrus:focus {
+.citrus:focus, .citrus:hover {
     border: 2px solid green;
     box-shadow: -15px 7px 1px green;
 }
@@ -109,7 +109,7 @@
     box-shadow: -15px 7px 1px brown;
 }
 
-.candy:focus {
+.candy:focus, .candy:hover {
     border: 2px solid green;
     box-shadow: -15px 7px 1px green;
 }
@@ -126,7 +126,7 @@
     box-shadow: -15px 7px 1px brown;
 }
 
-.espresso:focus {
+.espresso:focus, .espresso:hover {
     border: 2px solid green;
     box-shadow: -15px 7px 1px green;
 }
@@ -141,7 +141,7 @@
     box-shadow: -15px 7px 1px brown;
 }
 
-.standard:focus {
+.standard:focus, .standard:hover {
     border: 2px solid green;
     box-shadow: -15px 7px 1px green;
 }
@@ -156,7 +156,7 @@
     box-shadow: -15px 7px 1px brown;
 }
 
-.fancy:focus {
+.fancy:focus, .fancy:hover {
     border: 2px solid green;
     box-shadow: -15px 7px 1px green;
 }
@@ -171,7 +171,7 @@
     box-shadow: -15px 7px 1px brown;
 }
 
-.mason:focus {
+.mason:focus, .mason:hover {
     border: 2px solid green;
     box-shadow: -15px 7px 1px green;
 }
@@ -186,7 +186,7 @@
     box-shadow: -15px 7px 1px brown;
 }
 
-.mini:focus {
+.mini:focus, .mini:hover {
     border: 2px solid green;
     box-shadow: -15px 7px 1px green;
 }
@@ -201,7 +201,7 @@
     box-shadow: -15px 7px 1px brown;
 }
 
-.mini__mason:focus {
+.mini__mason:focus, .mini__mason:hover {
     border: 2px solid green;
     box-shadow: -15px 7px 1px green;
 }

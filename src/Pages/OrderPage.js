@@ -30,7 +30,7 @@ const Order = () => {
   };        
 
   const addItemData = async (itemFormData) => {
-    const newItemFormData = {...itemFormData, email: Userfront.user.email}
+    const newItemFormData = {...itemFormData, email: Userfront.user.email, status: "Processing"}
     const response = await axios.post(
       `${process.env.REACT_APP_BACKEND_URL}/items`,
       newItemFormData
@@ -70,11 +70,6 @@ const Order = () => {
             <button className="buttons">Sign Up</button>
           </a>}
         </section>
-        {/* <section>
-          <a href="/viewcart">
-            <button className="buttons">View Cart</button>
-          </a>
-        </section> */}
         <section>
           <a className="links" href="/home">
             <button className="buttons">Home</button>
