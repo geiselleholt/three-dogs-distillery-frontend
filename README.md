@@ -15,9 +15,10 @@ Installations:
 -React Router
 -UserFront for OAuth
 -Stripe for Payment Processing
--FramerMotion for react animations
--FontAwesome for brand icons
--ConfettiExpolosion for react animations
+-Cloudinary for Image Uploading
+-FramerMotion for React Animations
+-FontAwesome for Brand Icons
+-ConfettiExpolosion for React Animations
 -ProxyMiddleware for Stripe integration
 
 
